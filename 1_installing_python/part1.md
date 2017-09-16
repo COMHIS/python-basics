@@ -56,7 +56,9 @@ Now that we have Python installed let’s create the classic first program, call
   * Linux: Gedit
   * Mac: TextEdit (you have to go into plain text mode by following the instructions [here](https://www.tekrevue.com/tip/textedit-plain-text-mode/))
 * Write the following line of code on the first row in the text file, and add a blank line below that (all python programs finish with one empty row).  
-  ```print("Hello World!")
+```python
+print("Hello World!")
+
 ```
 * Save the text in a file named `helloworld.py` in the project directory you created. 
 * Open terminal like you previously did and navigate to the project directory that you created earlier.
