@@ -4,15 +4,15 @@ As a first step, we will install a programming language, called Python, on your 
 
 ---
 
-* Windows:
+* **Windows:**
   1. download Python 3 installer from  [python.org](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe).
   2. Run the installer, and make sure to check the box saying “add Python 3.6 to path”
   3. The installer might ask you to change maximum length of path variable. Do that if it does so.
   4. You should be done now. To see if the installation was successfull go to part [“running python in terminal”](./python_terminal.md) in this assignment.
-* Linux (Ubuntu):
+* **Linux (Ubuntu):**
   1. Test if you already have Python 3 installed by following the instructions at [“running python in terminal”](./python_terminal.md).
   2. If not, follow the instructions at [this askubuntu.com answer](https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get).
-* Mac:
+* **Mac:**
   1. Test if you already have Python 3 installed by following the instructions at [“running python in terminal”](./python_terminal.md).
   2. If you don’t have Python 3 already installed, you can go about in two different ways:
     * SIMPLE (quite ok for now)
@@ -50,9 +50,9 @@ Make sure that you now have Python 3 installed by following the instructions [he
 Now that we have Python installed let’s create the classic first program, called “Hello World”. The reason for that name becomes obvious soon.
 
 * Open a text editor that saves the text in plain text format (meaning text without any formatting). Word or OpenOffice isn’t a good choice here, but the following programs are (among many others):
-  * Windows: Notepad
-  * Linux: Gedit
-  * Mac: TextEdit (you have to go into plain text mode by following the instructions [here](https://www.tekrevue.com/tip/textedit-plain-text-mode/))
+  * **Windows:** Notepad
+  * **Linux:** Gedit
+  * **Mac:** TextEdit (you have to go into plain text mode by following the instructions [here](https://www.tekrevue.com/tip/textedit-plain-text-mode/))
 * Write the following line of code on the first row in the text file, and add a blank line below that (all python programs finish with one empty row).  
 ```python
 print("Hello World!")
@@ -67,7 +67,7 @@ print("Hello World!")
 
 ## Finding answers and moving on
 
-* If something went wrong come to our course Slack at KURSSINSLÄKKI.slack.com and describe the problem. Feel free to offer advice to your fellow students struggling with problems that you were able to solve. Also, feel free to use google to look for answers if you get stuck. Strong googling skills are at least 50% of all programming.
+* If something went wrong come to our course Slack at *[KURSSINSLÄKKI.slack.com](KURSSINSLÄKKI.slack.com)* and describe the problem. Feel free to offer advice to your fellow students struggling with problems that you were able to solve. Also, feel free to use google to look for answers if you get stuck. Strong googling skills are at least 50% of all programming.
 * After you’ve got the code working try modifying it to print something else.
 * You can also try playing around with in Python terminal: run the command `python` in terminal, and you should see the interactive version of Python coming up. Type the previous code in, and press enter to execute it.
   * To leave the interpreter, type `quit()`.
