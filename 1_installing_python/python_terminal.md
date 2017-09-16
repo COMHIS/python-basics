@@ -6,7 +6,12 @@ Terminal (or console) is a tool for running commands on the computer in an “ol
 
 When these instructions tell you to type something the terminal, the expectation is that you’ll press enter after typing in the command.
 
-Let’s test and make sure that the Python interpreter that we just installed works:
+---
+
+Let’s test and make sure that the Python interpreter works/exists:
+
+---
+
 1. Open the terminal (follow the instructions for your operating system):
   * Linux (Cubbli)
     * Menu -> Terminal
