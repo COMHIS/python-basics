@@ -13,13 +13,13 @@ Let’s test and make sure that the Python interpreter works/exists:
 ---
 
 1. Open the terminal (follow the instructions for your operating system):
-  * Linux (Cubbli)
+  * **Linux** (Cubbli):
     * Menu -> Terminal
     * or: bottom row: Terminal-icon
     * or: Ctrl+Alt+t
-  * Windows:
+  * **Windows**:
     * Start -> Command Prompt (or Komentokehote)
-  * Mac:
+  * **Mac**:
     * Open the Console command line tool from Applications->Utilities->Console
 2. Type `python3`
   * You should see something like this:  
