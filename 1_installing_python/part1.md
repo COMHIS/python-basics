@@ -67,7 +67,7 @@ print("Hello World!")
 
 ## Finding answers and moving on
 
-* If something went wrong come to our course Slack at *[KURSSINSLÄKKI.slack.com](https://KURSSINSLÄKKI.slack.com)* and describe the problem. Feel free to offer advice to your fellow students struggling with problems that you were able to solve. Also, feel free to use google to look for answers if you get stuck. Strong googling skills are at least 50% of all programming.
+* If something went wrong come to our course Slack at *[KURSSINSLÄKKI.slack.com](https://dhintros.slack.com)* and describe the problem. Feel free to offer advice to your fellow students struggling with problems that you were able to solve. Also, feel free to use google to look for answers if you get stuck. Strong googling skills are at least 50% of all programming.
 * After you’ve got the code working try modifying it to print something else.
 * You can also try playing around with in Python terminal: run the command `python` in terminal, and you should see the interactive version of Python coming up. Type the previous code in, and press enter to execute it.
   * To leave the interpreter, type `quit()`.
