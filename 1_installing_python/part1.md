@@ -60,7 +60,7 @@ print("Hello World!")
 ```
 * Save the text in a file named `helloworld.py` in the project directory you created. 
 * Open terminal like you previously did and navigate to the project directory that you created earlier.
-* Type command python helloworld.py in terminal to see your first program in action.
+* Type command `python3 helloworld.py` in terminal to see your first program in action.
 * If all goes well you should see the text `Hello World!` appear in the terminal.
 
 ---
