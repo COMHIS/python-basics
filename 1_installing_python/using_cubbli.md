@@ -1,7 +1,7 @@
 ## What if I don’t have a laptop?
 
 * You can use the Linux virtual environment provided by the university and accessible from all normal workstations at Aleksandria and other places.
-* After logging into Windows normally, navigate to:
+* After logging into university Windows normally, navigate to:
   * Start → All Programs → VMware Horizon Client
 * In the Horizon Client choose:
   * vdi.helsinki.fi → Cubbli Linux 16
