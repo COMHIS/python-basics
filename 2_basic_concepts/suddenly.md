@@ -20,19 +20,10 @@ Now we also want to save our output, and produce a similar concordance output as
 
 **Bonus assignment:** For those who want to do one. We seem to have produced valid .tsv format there. Find a way to open the output file we produced in a spreadsheet program.
 
+## "Suddenly" over the whole work
 
-* load a text of dostoevsky's from project gutenberg
+Let's have a more statistical overview of the use of "suddenly" in _the Idiot_ now. We'll want to create a measure to track the "suddenliness" of a limited section of the text and locate the sections where it is used most frequently. We found 261 occurences of the term, and the whole work is¸about 27,000 lines long. So circa one in hundred lines has the term. Looking at the text, a typical paragraph seems to be around 15 lines. On a printed book, a page is somewhere around 20 to 40 lines of text. 
 
+We can try different sizes for our section of text, but going for a window of around 5 pages or 10 paragraphs might make sense as a starting point. This translates roughly to 150 lines. Like previously, fix the code in [dostoyevsky3.py](./dostoyevsky3.py) and run it.
 
-
-## The logic of the program:
-
-* read lines into list
-* process elements in list of lines, find word
-  * check if word substring in line. 
-  * if yes, insert tabs into string
-
-
-* people associated with
-* environment - scenes?
-* said by whom?
+The output should again be readable as a .csv -file, and thus can be opened in Excel, OpenOffice, Google Sheet, etc. for visualization purposes. Try making a chart out of that, and see how varying the window size affects the results.
