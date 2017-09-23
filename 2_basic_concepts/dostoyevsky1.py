@@ -4,8 +4,8 @@ from intros import read_txt_file_to_list
 
 inputfile = "the_idiot.txt"
 # MODIFY HERE.
-# Make the search_term - variable equal to the word we want to search for
-search_term = "suddenly"
+# Make the search_term -variable equal to the word we want to search for:
+search_term = "CHANGETHIS"
 
 # We use the command we loaded from the another script to create a list
 # of lines of text- a list of string-type variables. Lists will be covered
@@ -20,7 +20,10 @@ total_lines_found = 0
 for line in lines:
     # The find() command returns the 'index' of the term that we are searching
     # for, or -1 if the term was not found at all.
-    find_index = line.find(search_term)
+    # We also want to take both upper and lowercase variations (Suddenly and
+    # suddenly) into account, so we convert the line into lowercase with the
+    # .lower() -command before searching. Note how we can chain the commands.
+    find_index = line.lower().find(search_term)
     # MODIFY HERE.
     # We want the following if-statement to run if find_index does not equal -1
     # remember the operators? choose a correct one and put it on the following
