@@ -147,7 +147,7 @@ if my_name == "Ann":
 else:
     print("Greetings " + my_name)
 ```
-Depending on the value of the my_name -variable the script prints different greetings. Ann gets a special greeting, others don't.
+Depending on the value of the my_name -variable the script prints different greetings. Ann gets a special greeting, others don't. The part after `if` needs to evaluate to either `True`or `False`. If it evaluates to `True` it is executed, and if not, it is skipped. In case the if -block is followed by `else`, and the if -part was not executed, the part in else is executed instead.
 
 **Note:** Indentation. The code "inside" the if- and else-statements is indented by four spaces. Indentation is the way Python knows what parts of code are covered by the conditional statement.
 
