@@ -20,8 +20,6 @@ for line in lines:
     # one if the line satisfies our search criteria.
     if find_index != -1:
         terms_found_in_window.append(1)
-        # if no term is found, and the total is greater than 0,
-        # we reduce the total amount by one.
     else:
         terms_found_in_window.append(0)
     # when the list of terms found reaches our window size, we

@@ -76,11 +76,9 @@ new_apples = 13
 # So add the numbers up, and store the results in another variable:
 total_apples = old_apples + new_apples
 # ... and let's print the results.
-print(str(total_apples))
+print(total_apples)
 ```
 You should see the number `25` print out.
-
-But there was something funny with the print command there, right? We had another command inside it, namely `str()`. That one converted our number (_integer_) to a _string_. The `print()`-command only accepts a string, so we had to do a conversion from a number to a textual representation of that number before we could print it out.
 
 ### Variables and values 3
 
@@ -91,7 +89,8 @@ kids = 3
 # note: division is done by the / -operator. Complete the below line:
 apples_per_kid =
 # ... and let's print the results again:
-print("Each kid can have " + str(apples_per_kid) + " apples.")
+print("Apples per kid:")
+print(apples_per_kid)
 ```
 The completed script should print out the text `Each kid can have 4.0 apples.`. Note that we did some manipulation with the _string_ variables too, inside the print command.
 
