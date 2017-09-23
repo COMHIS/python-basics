@@ -89,9 +89,11 @@ kids = 3
 # note: division is done by the / -operator. Complete the below line:
 apples_per_kid =
 # ... and let's print the results again:
-print("Apples per kid:")
-print(apples_per_kid)
+print("Apples per kid: " + str(apples_per_kid))
 ```
+
+**Note:** There is a `str()` -command inside the print function. This is called _casting_. What happened there was converting a value in one variable type to another, namely making a _string_, that is, text, out of a _float_, a number. This was necessary so that we could combine it with the other _string_ -type variable, the text "Apples per kid: ".
+
 The completed script should print out the text `Each kid can have 4.0 apples.`. Note that we did some manipulation with the _string_ variables too, inside the print command.
 
 ### Variables and values 4
