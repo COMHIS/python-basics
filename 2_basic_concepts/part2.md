@@ -4,6 +4,8 @@ This part will introduce the basic rationale behind a program and introduce some
 
 **Note:** We'll occasionally use the term _script_ here. That term refers to the program code that we're writing.
 
+If the following is trivial for you, skip straight into the [Dostoyevsky -text analysis part](./suddenly.md). 
+
 ---
 
 ## Concepts to be covered
@@ -179,4 +181,4 @@ if cats != 5:
 
 ## Suddenly in Dostoyevsky
 
-We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow [this link](./suddenly.md) to an assignment on textual analysis of Dostoyevsky.
+We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow on to an [assignment on analysis of Dostoyevsky's Idiot](./suddenly.md).
