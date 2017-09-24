@@ -16,7 +16,7 @@ A program's function is to process data, in one form or other. It takes in data 
 **input:** Text of the _Crime and Punishment_ by Dostoyevsky.
 **output:** An analysis of word use in that text.
 
-You can think of a script as a machine that processes raw material into usable form. Throw in a lump of metal and out comes a screw to be used. Insert a pile of library catalogues, and receive a quantitative representation of book history.
+You can think of a script as a machine that processes raw material into usable form: Throw in a lump of metal and out comes a screw to be used. Insert a pile of library catalogues, and receive a quantitative representation of book history.
 
 ### Program Flow
 
@@ -56,6 +56,8 @@ The script in your editor should now look like this:
 course = "Introduction to Digital Humanities"
 print(course)
 ```
+Remember to add a blank line at the end. As mentioned previously, all python scripts end with a blank line.
+
 Save it with a name of your choosing (`task1.py` for example), and run it in terminal with the command:
 `python3 task1.py`
 If you forgot how to use the terminal, refer back to the materials for part 1.
@@ -180,6 +182,6 @@ if cats != 5:
 
 ```
 
-## Suddenly in Dostoyevsky
+## Suddenly in Dostoyevsky (input & output)
 
-We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow on to an [assignment on analysis of Dostoyevsky's Idiot](./suddenly.md).
+We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow on to an [assignment on analysis of Dostoyevsky's Idiot](./suddenly.md) to explore the practical uses of coding in digital humanities and to get an example of research related input->script->output -process.
