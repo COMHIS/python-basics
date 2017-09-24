@@ -24,6 +24,7 @@ window_size = CHANGETHIS
 # seems complicated now, we'll go into more detail on these later.
 lines_processed = 0
 terms_found_in_window = []
+# This is where we save our results:
 rolling_window_results = []
 
 for line in lines:
@@ -57,6 +58,7 @@ for line in lines:
 
 # MODIFY THIS. Like previously, change the filename -parameter to match
 # the variable where our output filename is saved.
+# also save the lines- parameter to match the variable in which we saved our results.
 write_lines_into_txt_file(filename=CHANGETHIS,
-                          lines=rolling_window_results,
+                          lines=CHANGETHIS,
                           add_newlines=True)
