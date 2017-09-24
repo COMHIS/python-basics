@@ -5,7 +5,7 @@ As a first step, we will install a programming language, called Python, on your 
 ---
 
 * **Windows:**
-  1. download Python 3 installer from  [python.org](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe).
+  1. download Python 3 installer from [python.org](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe).
   2. Run the installer, and make sure to check the box saying “add Python 3.6 to path”
   3. The installer might ask you to change maximum length of path variable. Do that if it does so.
   4. You should be done now. To see if the installation was successfull go to part [“running python in terminal”](./python_terminal.md) in this assignment.

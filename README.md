@@ -4,3 +4,5 @@ A short introduction to Python for Digital Humanities students and other DH-curi
 ## Parts
 
 * [Part 1 - Installing Python](./1_installing_python/part1.md)
+* [Part 2 - Basic Concepts](./2_basic_concepts/part2.md)
+
