@@ -12,11 +12,19 @@ If the following is trivial for you, skip straight into the [Dostoyevsky -text a
 
 ### Input and output
 
-A program's function is to process data, in one form or other. It takes in data provided by the user (input) and produces a result based on that (output). An example of this would be:
+A program's function is to process data, in one form or other. It takes in data provided by the user (input) and produces a result based on that (output). A program may be as simple as:
+**input:** Firstname Lastname
+**output:*** firstname.lastname@helsinki.fi
+
+Programs may be written to complete simple intermediary tasks in a longer workflow, such as:
+**input:** Excel sheet
+**output:** The same Excel sheet, but rows filtered by some condition, and one of the columns split into two columns.
+
+A more DH example of this would be:
 **input:** Text of the _Crime and Punishment_ by Dostoyevsky.
 **output:** An analysis of word use in that text.
 
-You can think of a script as a machine that processes raw material into usable form: Throw in a lump of metal and out comes a screw to be used. Insert a pile of library catalogues, and receive a quantitative representation of book history.
+You can think of a script as a machine that processes raw material into a different form. Whether it takes digital plywood planks and orderes them by length and adds a tiny hole in the middle, or smashes them all into splinters, looks for those with grayish hue and counts them.
 
 ### Program Flow
 
