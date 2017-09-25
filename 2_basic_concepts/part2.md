@@ -290,6 +290,7 @@ for birth_year in birth_years:
     print(age)
 
 ```
+**Note:** In our for -loop statement we created a variable `birth_year` that exists only inside that loop. A structure like that is extremely common when iterating over a list.
 
 Next, let's figure out the average age. To find the average, we'll create a _variable_ where we will sum all the values in the list and then divide it by the length of the list. There's a handy function `len()` that will get us the length (number of values stored in) of a list.
 
