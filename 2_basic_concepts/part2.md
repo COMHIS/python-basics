@@ -220,9 +220,9 @@ cats = 5
 dogs = 7
 # And now we'll compare those:
 # Are there more cats than dogs in our variables?
-more_cats = cats > dogs
-# Booleans don't need to be explicitly converted to strings for printing ...
-print(more_cats)
+are_there_more_cats = cats > dogs
+# And print that out:
+print(are_there_more_cats)
 ```
 
 ### Flow and flow control 2
