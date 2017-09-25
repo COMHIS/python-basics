@@ -140,7 +140,7 @@ If you forgot how to use the terminal, refer back to the materials for part 1.
 
 ### Variables and values 2
 
-Lets try modifying a variable now, and doing some basic primary school mathematics. Create a new script, or change the previous one, and save execute it when appropriate.
+Lets try modifying a variable now, and doing some basic primary school mathematics. Create a new script, or change the previous one, and save and execute it when appropriate.
 
 First we manipulate a string variable:
 
