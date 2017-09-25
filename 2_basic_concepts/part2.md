@@ -1,6 +1,6 @@
 # Part 2 - Basic concepts in programming
 
-This part will introduce the basic rationale behind a program and introduce some of its key components. Next, we'll try those concepts in practice with small coding excercises. After that we will dive into a basic example where these are applied in quantitative literary study.
+This part will introduce the basic rationale behind a program and introduce some of its key components. Next, we'll try those concepts in practice with small coding exercises. After that we will dive into a basic example where these are applied in quantitative literary study.
 
 **Note:** We'll occasionally use the term _script_ here. That term refers to the program code that we're writing.
 
@@ -16,9 +16,9 @@ A program's function is to process data, in one form or other. It takes in data 
 
 **input:** Firstname Lastname
 
-**output:*** firstname.lastname@helsinki.fi
+**output:** firstname.lastname@helsinki.fi
 
-Programs may be written to complete simple intermediary tasks in a longer workflow, such as:
+Programs may be written to complete simple intermediary tasks in a longer work flow, such as:
 
 **input:** Excel sheet
 
@@ -30,11 +30,11 @@ A more DH example of this would be:
 
 **output:** An analysis of word use in that text.
 
-You can think of a script as a machine that processes raw material into a different form. Whether it takes digital plywood planks and orderes them by length and adds a tiny hole in the middle, or smashes them all into splinters, looks for those with grayish hue and counts them.
+You can think of a script as a machine that processes raw material into a different form. Whether it takes digital plywood planks and orders them by length and adds a tiny hole in the middle, or smashes them all into splinters, looks for those with grayish hue and counts them.
 
 ### Program Flow
 
-Like stated before, a program consists of operations executed on some input. Program is in that sense not quite unlike a mathematical funtion:
+Like stated before, a program consists of operations executed on some input. Program is in that sense not quite unlike a mathematical function:
 
 _f(x) = y_
 
@@ -70,7 +70,7 @@ And repeat this for each member in the registry.
 
 ## Small exercises
 
-For each of these, create a script-file, like you did previously with the _Hello World!_ -task, and run that script with Python, as you did previously. We'll walk thourgh the process once again in the first example.
+For each of these, create a script-file, like you did previously with the _Hello World!_ -task, and run that script with Python, as you did previously. We'll walk through the process once again in the first example.
 
 **Note:** Code can become messy fast. There are various ways to combat that, and one of those is called commenting. In the following excercises you'll notice explanatory text on rows preceded by the character '#'. That's the way commenting is done in Python. Everything on the row after that character is ignored by the Python-interpreter.
 
@@ -187,7 +187,7 @@ print(more_cats)
 
 ### Flow and flow control 2
 
-Let's do something with those comparisons now. Get aquinted with the _if-else_ -elements:
+Let's do something with those comparisons now. Get acquainted with the _if-else_ -elements:
 
 ```python
 my_name = "Joe"
@@ -202,7 +202,7 @@ Depending on the value of the my_name -variable the script prints different gree
 
 ### Flow and flow control 3
 
-Try the if-else blocks yourself now. Write a script that assigns a number to a variable, and then evalyates that. Try different operators, and print a message if the evalution is true. Here's a few examples to get you started:
+Try the if-else blocks yourself now. Write a script that assigns a number to a variable, and then evaluates that. Try different operators, and print a message if the evaluation is true. Here's a few examples to get you started:
 
 ```python
 frustrated_attempts = 6
