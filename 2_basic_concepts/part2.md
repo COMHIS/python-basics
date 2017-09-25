@@ -32,6 +32,8 @@ A more DH example of this would be:
 
 You can think of a script as a machine that processes raw material into a different form. Whether it takes digital plywood planks and orders them by length and adds a tiny hole in the middle, or smashes them all into splinters, looks for those with grayish hue and counts them.
 
+---
+
 ### Program Flow
 
 Like stated before, a program consists of operations executed on some input. Program is in that sense not quite unlike a mathematical function:
@@ -56,6 +58,8 @@ else:
 
 In case the condition specified after `if` is true, the indented lines are run normally. If the condition is not true, the portion after `else` is run instead. In our example the _variable_ age (of some person we are considering in the code, presumably) does not satisfy our condition, and therefore we'll print out the line stating that the person is a minor. What is a _variable_ then? Follow on to the next section:
 
+---
+
 ### Variables and values
 
 While a program is running it needs to keep the data somewhere. Those locations where the data is kept are called _variables_. Those variables have names and the data those variables hold are called _values_.
@@ -75,6 +79,8 @@ You would write your program to do something like this:
 * **output**: _age_
 
 And repeat this for each member in the registry. While each member is treated in turn, we assign the name _birth_date_ to refer to the birth date of that respective member. Running exactly the same operation to long list of items is what makes programming a very powerful tool. This takes us to the next step, called:
+
+---
 
 ### Iteration
 
@@ -99,9 +105,6 @@ This is now little bit complicated looking, but it actually would do the job. Le
 * On the row age = date(1944,9,19) - date(birth_date) the real magic happens. We have imported a library called _datetime_ that contains a number of ready-made calendar related functions. By giving a date to its _date_-function, we turn it into a thing we can simply run calculations on. Such as subtraction here.
 * In the final row of the loop, we take the output of the previous row (_age_) and add it to the list we created on the first row.
 * When the loop has run its course to the end, we have list of all the ages of all the members in the member_registry on a specific date (19.9.1944).
-
-
-
 
 ----
 
