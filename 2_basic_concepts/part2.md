@@ -48,13 +48,15 @@ While a program is running it needs to keep the data somewhere. Those locations 
 
 You can think of variables as kind of shorthand ways of referring to things, or identities you give to pieces of text or numbers so you call them the same name even if their values would change.
 
-Imagine a circumstance where you are interested in Lotta Svärd organisation and want to know mean age of its members when the Continuation War ended. To begin with, you only have the organisation's member registry that contain member's birthdates but no age. What your program would do, would be to calculate the difference between each member's birthdate and 19.9.1944, store them, and calculate the mean.
+Imagine a circumstance where you are interested in Lotta Svärd organisation and want to know mean age of its members when the Continuation War ended. To begin with, you only have the organisation's member registry that contain members' birthdates but no age. What your program would do, would be to calculate the difference between each member's birthdate and 19.9.1944, store them, and calculate the mean.
 
 You would write your program to do something like this:
 
 * take _birth_date_ as **input**:
 * calculate _age_ = "19.9.1944" - _birth_date_
 * **output**: _age_
+
+And repeat this for each member in the registry.
 
 
 
