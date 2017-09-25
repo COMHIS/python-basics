@@ -62,7 +62,32 @@ You would write your program to do something like this:
 * calculate _age_ = "19.9.1944" - _birth_date_
 * **output**: _age_
 
-And repeat this for each member in the registry.
+And repeat this for each member in the registry. While each member is treated in turn, we assign the name _birth_date_ to refer to the birth date of that respective member. Running exactly the same operation to long list of items is what makes programming a very powerful tool. This takes us to the next step, called:
+
+### Iteration ###
+
+Iteration means that we repeat the same process identically a number of times. Iteration (some times called as _loops_) can take many forms, here we present the most usual way this is done in python, called **for each**-loops.
+
+The idea of **for each** loops is that it takes, as an input, something that can be iterated (usually a list of some kind), and goes through each member of that iterateable thing in turn until it reaches the end. And that's it.
+
+So let's write the example above in to a python code:
+
+```python
+ages = []
+for member in member_registry:
+    birth_date = member["birth_date"]
+    age = date(1944, 9, 19) - date(birth_date)
+    ages.append(age)
+```
+
+This is now little bit complicated looking, but it actually would do the job. Let's walk through the code one row at a time.
+* The part "ages=[]" builds a new, empty list into the computer's memory. In order for us to store the ages, we need something to store them into. This is how we do that.
+* for member in member_registry is the iteration operation. We tell the computer to go through the _member_registry_ database on row at a time, and on each iteration, call that row _member_.
+* The member_registry is a database, so it is form of key-value pairs, which means that different kinds of information is stored under different headings. We assume that our imaginative Lotta Svärd member registry contains not only birth dates, but other information as well, say birth place, education, rank or offive at the organisation etc. On the row birth_date = member["birth_date"] we specify that we are interested on the birth date data of each member.
+* On the row age = date(1944,9,19) - date(birt_date) the real magic happens. We have imported a library called _datetime_ that contains a number of ready-made calendar related functions. By giving a date to its _date_-function, we turn it into a thing we can simply run calculations on. Such as substraction here.
+* In the final row of the loop, we take the output of the previous row (_age_) and add it to the list we created on the first row.
+* When the loop has run its course to the end, we have list of all the ages of all the members in the member_registry on a specific date (19.9.1944).
+
 
 
 
