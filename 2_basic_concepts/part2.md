@@ -102,7 +102,17 @@ If you forgot how to use the terminal, refer back to the materials for part 1.
 
 Lets try modifying a variable now, and doing some basic primary school mathematics. Create a new script, or change the previous one, and save execute it when appropriate.
 
-We're dividing apples among kids again. Hooray.
+First we manipulate string variable:
+
+```python
+course = "Introduction to Digital Humanities"
+print(course)
+
+evaluation = "is teh best"
+print(course+" "+evaluation)
+```
+
+Next we'll move to integers. We're dividing apples among kids again. Hooray.
 
 Type the following in your script, save and run:
 ```python
