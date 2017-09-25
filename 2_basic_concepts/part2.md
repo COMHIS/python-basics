@@ -2,6 +2,8 @@
 
 This part will introduce the basic rationale behind a program and introduce some of its key components. Next, we'll try those concepts in practice with small coding exercises. After that we will dive into a basic example where these are applied in quantitative literary study.
 
+There's first a short theory part, and then some exercises. Don't worry if you don't get the "theory" on the first reading. Just go on into the exercises, and refer back to the first section. It will start to make more and more sense, eventually.
+
 **Note:** We'll occasionally use the term _script_ here. That term refers to the program code that we're writing.
 
 If the following is trivial for you, skip straight into the [Dostoyevsky -text analysis part](./suddenly.md). 
