@@ -34,7 +34,13 @@ You can think of a script as a machine that processes raw material into a differ
 
 ### Program Flow
 
-At the very basic level a program script is processed one line at a time, starting from top and ending at the bottom.
+Like stated before, a program consists of operations executed on some input. Program is in that sense not quite unlike a mathematical funtion:
+
+_f(x) = y_
+
+where x is input and y output. In fact, many operations in the program are written as _functions_. A program can consist of a single function, a huge labyrinth of nested functions, where inputs and outputs criss-cross until the final output is returned, or as most often, something in between.
+
+At the very basic level a program script is processed one line at a time, starting from top and ending at the bottom. Each row contains some kind of command that takes the program one step further.
 
 There are various means to control that flow to skip or repeat parts of the script. Of those we'll cover the most fundamental ones, called _conditional statements_, also know as _if-then-else_ -statements.
 
