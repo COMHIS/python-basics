@@ -13,3 +13,4 @@ def write_lines_into_txt_file(filename, lines, add_newlines=False):
             if add_newlines:
                 line = line + "\n"
             txtfile.write(line)
+
