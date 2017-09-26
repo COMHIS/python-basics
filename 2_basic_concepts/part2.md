@@ -6,6 +6,8 @@ There's first a short theory part, and then some exercises. Don't worry if you d
 
 **Note:** We'll occasionally use the term _script_ here. That term refers to the program code that we're writing.
 
+**Note:** At some point you'll want to use a bit more sophisticated editor than Notepad, TextEdit, etc. [See here for alternatives.](./editors.md) That point might as well be now.
+
 If the following is trivial for you, skip straight into the [Dostoyevsky -text analysis part](./suddenly.md). 
 
 ---
