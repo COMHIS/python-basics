@@ -1,6 +1,6 @@
 # Text editors for coding
 
-There's a wide choice of editors that have been developed with coding specifically in mind. Many of those are both free and good. A few alternatives are:
+There's a wide choice of editors that have been developed with coding specifically in mind. Many of those are both free and good. A few alternatives are (all free, all good):
 
 * [SublimeText](https://www.sublimetext.com/)
 * [Atom](https://atom.io/)
