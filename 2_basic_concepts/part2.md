@@ -334,7 +334,7 @@ for birth_year in birth_years:
 Now, based on the previous two examples, make a script that finds the total number of adults and minors in our sample data, and prints out the results. The steps for that are:
 
 * Copy the above code to act as a base that you will modify.
-* After the line with the `birth_years` - list:
+* After the line with the `birth_years` - list.
   * Create two variables (set to the value 0) to track the number of adults and minors.
   * For example, the variable tracking the amount of minors could look like this: `minors = 0`.
 * Instead of printing either "Adult" or "Minor" inside the loop, increase the corresponding variables by one.
