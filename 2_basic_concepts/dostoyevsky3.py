@@ -30,8 +30,9 @@ rolling_window_results = []
 for line in lines:
     lines_processed += 1
     find_index = line.lower().find(search_term)
-    # like previously we increase the amount of terms found by
-    # one if the line satisfies our search criteria.
+    # If the line has our search term we'll add the number 1 to our list,
+    # and if it doesn't we'll add 0. So, our list, which represents our 'window'
+    # will start to look something like this: [0, 0, 0, 1, 0, 0, 0, 1] ... etc. 
     if find_index != -1:
         terms_found_in_window.append(1)
     else:
