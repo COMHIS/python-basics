@@ -338,7 +338,7 @@ Now, based on the previous two examples, make a script that finds the total numb
   * Create two variables (set to the value 0) to track the number of adults and minors.
   * For example, the variable tracking the amount of minors could look like this: minors = 0.
 * Instead of printing either "Adult" or "Minor" inside the loop, increase the corresponding variables by one.
-  * Again, using the above minors-variable as an example, instead of print("Minor") that line would read: minors = minors + 1
+  * Again, using the above minors-variable as an example, instead of print("Minor"), the line would read: minors = minors +1
 * After the loop is finished print out the values in the variables holding the numbers for minors and adults.
   * Remember to pay attention to the indentation! The print -commands should not be inside the loop, so they should have no indentation.
 
