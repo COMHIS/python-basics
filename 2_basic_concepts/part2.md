@@ -336,9 +336,8 @@ Now, based on the previous two examples, make a script that finds the total numb
 * Copy the above code to act as a base that you will modify.
 * After the line with the birth_years -list:
 
-  Create two variables (set to the value 0) to track the number of adults and minors.
- 
-  For example, the variable tracking the amount of minors could look like this: minors = 0
+  Create two variables (set to the value 0) to track the number of adults and minors.  
+  For example, the variable tracking the amount of minors could look like this: `minors = 0`
 
 * Instead of printing either "Adult" or "Minor" inside the loop, increase the corresponding variables by one.
 
