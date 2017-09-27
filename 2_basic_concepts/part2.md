@@ -333,23 +333,13 @@ for birth_year in birth_years:
 
 Now, based on the previous two examples, make a script that finds the total number of adults and minors in our sample data, and prints out the results. The steps for that are:
 
-* Copy the above code to act as a base that you will modify.
-* After the line with the birth_years -list:
-
-  Create two variables (set to the value 0) to track the number of adults and minors.  
-  For example, the variable tracking the amount of minors could look like this: `minors = 0`.
-
-
-* Instead of printing either "Adult" or "Minor" inside the loop, increase the corresponding variables by one.
-
-  Using the above minors-variable as an example:  
-  instead of `print("Minor")`,  
-  the line would read: `minors = minors + 1`
-
-* After the loop is finished print out the values in the variables holding the numbers for minors and adults.
-  
-  Remember to pay attention to the indentation! The print -commands should not be inside the loop,
-  so they should have no indentation.
+1. Copy the above code to act as a base that you will modify.
+2. After the line with the birth_years -list, create two variables (set to the value 0) to track the number of adults and minors.
+  * For example, the variable tracking the amount of minors could look like this: `minors = 0`.
+3. Instead of printing either "Adult" or "Minor" inside the loop, increase the corresponding variables by one.
+  * Using the above minors-variable as an example: instead of `print("Minor")`, the line would read: `minors = minors + 1`.
+4. After the loop is finished print out the values in the variables holding the numbers for minors and adults.
+  * Remember to pay attention to the indentation! The print -commands should not be inside the loop, so they should have no indentation.
 
 ### Iteration 3
 
