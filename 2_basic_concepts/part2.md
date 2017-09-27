@@ -114,6 +114,8 @@ This is now little bit complicated looking, but it actually would do the job. Le
 
 ## Small exercises
 
+**Note:** Each example here is separate. So, generally, start a new file per exercise, and dont just paste the new code after old exercises.
+
 For each of these, create a script-file, like you did previously with the _Hello World!_ -task, and run that script with Python, as you did previously. We'll walk through the process once again in the first example.
 
 **Note:** Code can become messy fast. There are various ways to combat that, and one of those is called commenting. In the following excercises you'll notice explanatory text on rows preceded by the character '#'. That's the way commenting is done in Python. Everything on the row after that character is ignored by the Python-interpreter.
@@ -141,8 +143,6 @@ Save it with a name of your choosing (`task1.py` for example), and run it in ter
 If you forgot how to use the terminal, refer back to the materials for part 1.
 
 **Note:** Another term for running a script is "execute". We'll probably use that in the instructions too, just to break the monotony.
-
-**Note:** Each example here is separate. So, generally, start a new file per exercise, and dont just paste the new code after old exercises.
 
 ### Variables and values 2
 
@@ -342,6 +342,22 @@ Now, based on the previous two examples, make a script that finds the total numb
   * Using the above minors-variable as an example: instead of `print("Minor")`, the line would read: `minors = minors + 1`.
 4. After the loop is finished print out the values in the variables holding the numbers for minors and adults.
   * Remember to pay attention to the indentation! The print -commands should not be inside the loop, so they should have no indentation.
+
+**Hints, in case you get stuck:** Often in programming we encounter situations like above where we have to count items. The typical way to do this is to have a variable that keeps tally of the total, which is modified each time an item is added to the that. So, for the above task:
+
+```python
+# let's create a variable for our minors and start the total at 0:
+minors = 0
+# each time we encounter a new minor, we place a new value in that
+# variable, which is equal to the value that was there previously, plus one.
+# So, inside the if statement in the for-loop:
+for birth_year in birth_years:
+    # .....
+    if age < 18:
+        minors = minors + 1
+```
+
+On that last line: `minors =` means that we are placing a value in that variable. And the rest of that line: `minors + 1` means, that we are recovering, what was in that variable previously and adding 1 to it. So, the end result is that, the value in our variable grows by one.
 
 ### Iteration 3
 
