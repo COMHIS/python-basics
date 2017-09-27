@@ -142,6 +142,8 @@ If you forgot how to use the terminal, refer back to the materials for part 1.
 
 **Note:** Another term for running a script is "execute". We'll probably use that in the instructions too, just to break the monotony.
 
+**Note:** Each example here is separate. So, generally, start a new file per exercise, and dont just paste the new code after old exercises.
+
 ### Variables and values 2
 
 Lets try modifying a variable now, and doing some basic primary school mathematics. Create a new script, or change the previous one, and save and execute it when appropriate.
