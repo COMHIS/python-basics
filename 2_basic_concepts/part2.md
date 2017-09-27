@@ -381,4 +381,6 @@ Copy the code, modify it to find out the highest age in the dataset, and print t
 
 ## Suddenly in Dostoyevsky (input & output)
 
+The following is optional, in case you were relatively quick with the above:
+
 We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow on to an [assignment on analysis of Dostoyevsky's "the Idiot"](./suddenly.md) to explore the practical uses of coding in digital humanities and to get an example of research related input->script->output -process.
