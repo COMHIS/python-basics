@@ -8,7 +8,7 @@ There are structures utilized her that we have not covered yet, and you don't ne
 
 ## Counting "suddenly"
 
-We'll expand the script in a few steps. First, let's read the text from a file, and count the lines with the word `suddenly` in them. Save the script files (right click & save as) <a href="https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/intros.py" download>intros.py</a> and [dostoyevsky1.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky1.py) into a directory on your computer, and modify `dostoyevsky1.py` so that it will run without errors. You will also need to load the source text file [the_idiot.txt](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/the_idiot.txt) and save it in that save directory.
+We'll expand the script in a few steps. First, let's read the text from a file, and count the lines with the word `suddenly` in them. Save the script files (right click & save as) <a href="https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/intros.py" download="intros.py">intros.py</a> and [dostoyevsky1.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky1.py) into a directory on your computer, and modify `dostoyevsky1.py` so that it will run without errors. You will also need to load the source text file [the_idiot.txt](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/the_idiot.txt) and save it in that save directory.
 
 You should end up with the text `Total 261 lines with the term "suddenly" found.` printing in terminal.
 
