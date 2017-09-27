@@ -8,7 +8,7 @@ There are structures utilized her that we have not covered yet, and you don't ne
 
 ## Counting "suddenly"
 
-We'll expand the script in a few steps. First, let's read the text from a file, and count the lines with the word `suddenly` in them. Save the script files (right click & save as) <a href="https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/intros.py" download="intros.py">intros.py</a> and [dostoyevsky1.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky1.py) into a directory on your computer, and modify `dostoyevsky1.py` so that it will run without errors. You will also need to load the source text file [the_idiot.txt](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/the_idiot.txt) and save it in that save directory.
+We'll expand the script in a few steps. First, let's read the text from a file, and count the lines with the word `suddenly` in them. Save the script files (right click & save as) [intros.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/intros.py) and [dostoyevsky1.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky1.py) into a directory on your computer, and modify `dostoyevsky1.py` so that it will run without errors. You will also need to load the source text file [the_idiot.txt](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/the_idiot.txt) and save it in that save directory.
 
 You should end up with the text `Total 261 lines with the term "suddenly" found.` printing in terminal.
 
@@ -18,7 +18,7 @@ You should end up with the text `Total 261 lines with the term "suddenly" found.
 
 We want to know in more detail what is happening around "suddenly" in the text. For this we'll employ a linguistic concept called _concordance_, which is explained [here](https://www.nottingham.ac.uk/alzsh3/acvocab/concordances.htm).
 
-Now we also want to save our output, and produce a similar concordance output as in the example in the link. After modifying [dostoyevsky2.py](./dostoyevsky2.py) correctly, you should have a results file with that.
+Now we also want to save our output, and produce a similar concordance output as in the example in the link. After modifying (right-click & save as again) [dostoyevsky2.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky2.py) correctly, you should have a results file with that.
 
 **Bonus assignment:** For those who want to do one. We seem to have produced valid .tsv format there. Find a way to open the output file we produced in a spreadsheet program.
 
@@ -26,7 +26,7 @@ Now we also want to save our output, and produce a similar concordance output as
 
 Let's have a more statistical overview of the use of "suddenly" in _the Idiot_ now. We'll want to create a measure to track the "suddenliness" of a limited section of the text and locate the sections where it is used most frequently. We found 261 occurences of the term, and the whole work is¸about 27,000 lines long. So circa one in hundred lines has the term. Looking at the text, a typical paragraph seems to be around 15 lines. On a printed book, a page is somewhere around 20 to 40 lines of text. 
 
-We can try different sizes for our section of text, but going for a window of around 5 pages or 10 paragraphs might make sense as a starting point. This translates roughly to 150 lines. Like previously, fix the code in [dostoyevsky3.py](./dostoyevsky3.py) and run it. 
+We can try different sizes for our section of text, but going for a window of around 5 pages or 10 paragraphs might make sense as a starting point. This translates roughly to 150 lines. Like previously, fix the code in [dostoyevsky3.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky3.py) and run it. 
 
 **Bonus assignment:** The output should again be readable as a .csv -file, and thus can be opened in Excel, OpenOffice, Google Sheet, etc. for visualization purposes. Try making a chart out of that, and see how varying the window size affects the results.
 
