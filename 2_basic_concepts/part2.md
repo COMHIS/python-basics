@@ -88,9 +88,9 @@ And repeat this for each member in the registry. While each member is treated in
 
 ### Iteration
 
-Iteration means that we repeat the same process identically a number of times. Iteration (some times called as _loops_) can take many forms, here we present the most usual way this is done in python, called **for each**-loops.
+Iteration means that we repeat the same process identically a number of times. Iteration (some times called as _loops_) can take many forms, here we present the most usual way this is done in python, called **for**-loops.
 
-The idea of **for each** loops is that it takes, as an input, something that can be iterated (usually a list of some kind), and goes through each member of that iterable thing in turn until it reaches the end. And that's it.
+The idea of a **for** loop is that it takes, as an input, something that can be iterated (usually a list of some kind), and goes through each member of that iterable thing in turn until it reaches the end. And that's it.
 
 So let's write the example above in to a python code:
 
@@ -242,7 +242,7 @@ else:
 ```
 Depending on the value of the my_name -variable the script prints different greetings. Ann gets a special greeting, others don't. The part after `if` needs to evaluate to either `True`or `False`. If it evaluates to `True` it is executed, and if not, it is skipped. In case the if -block is followed by `else`, and the if -part was not executed, the part in else is executed instead.
 
-**Note:** Indentation. The code "inside" the if- and else-statements is indented by four spaces. Indentation is the way Python knows what parts of code are covered by the conditional statement.
+**Note:** Indentation. The code "inside" the if- and else-statements is indented by four spaces. Indentation is the way Python knows what parts of code are covered by the conditional statement. More generally, the indented sections are used to separate smaller semi-independent sections of code, and they will be covered more in detail next time, when we learn more about _functions_.
 
 ### Flow and flow control 3
 
@@ -284,7 +284,7 @@ birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
 
 In the above code we declared a 10-item long list of numbers (integers). Add a few more yourself, and try to print it. 
 
-Let's figure out the ages in 1944 for those birth years next. We'll employ the **for each** -loop that we learned about. To know the age for each birth year, we should subtract that year from the current year. We'll print out the ages as we figure them out, just to see what's happening.
+Let's figure out the ages in 1944 for those birth years next. We'll employ the _for_-loop that we learned about. To know the age for each birth year (this is not how you figure out sobodys age in reality, but close enough for now), we should subtract that year from the current year. We'll print out the ages as we figure them out, just to see what's happening.
 
 ```python
 birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
@@ -331,7 +331,7 @@ for birth_year in birth_years:
 
 ```
 
-Now, based on the previous two examples, make a script script that finds the total number of adults and minors in our sample data, and prints out the results.
+Now, based on the previous two examples, make a script that finds the total number of adults and minors in our sample data, and prints out the results.
 
 ### Iteration 3
 
@@ -355,4 +355,4 @@ Copy the code, modify it to find out the highest age in the dataset, and print t
 
 ## Suddenly in Dostoyevsky (input & output)
 
-We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow on to an [assignment on analysis of Dostoyevsky's Idiot](./suddenly.md) to explore the practical uses of coding in digital humanities and to get an example of research related input->script->output -process.
+We've done enough small exercises now. Let's have a look at a small concrete data science example now. Follow on to an [assignment on analysis of Dostoyevsky's "the Idiot"](./suddenly.md) to explore the practical uses of coding in digital humanities and to get an example of research related input->script->output -process.
