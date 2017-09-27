@@ -20,7 +20,7 @@ We want to know in more detail what is happening around "suddenly" in the text. 
 
 Now we also want to save our output, and produce a similar concordance output as in the example in the link. After modifying (right-click & save as again) [dostoyevsky2.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky2.py) correctly, you should have a results file with that.
 
-**Bonus assignment:** For those who want to do one. We seem to have produced valid .tsv format there. Find a way to open the output file we produced in a spreadsheet program.
+**Bonus assignment:** For those who want to do one. We seem to have produced valid .tsv format there. Find a way to open the output file we produced in a spreadsheet program. Start with giving it the extension ".tsv".
 
 ## "Suddenly" over the whole work
 
@@ -28,6 +28,10 @@ Let's have a more statistical overview of the use of "suddenly" in _the Idiot_ n
 
 We can try different sizes for our section of text, but going for a window of around 5 pages or 10 paragraphs might make sense as a starting point. This translates roughly to 150 lines. Like previously, fix the code in [dostoyevsky3.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky3.py) and run it. 
 
+**Note:** A window here means gradually moving over the whole text, and focusing on a limited number of lines at a time. So, as a start, we'll consider the first 150 lines of the text, and count the lines satisfying our criteria there. Then we move the window by one line: Now we consider lines 2-151, and count total hits for that subsection of the text. We'll keep on moving the window- lines: 3 to 152, 4 to 153, 5-154, ... 205-354, ... etc, until we reach the end of the text. Thus we have scanned the whole text, and have total number of hits for each subsection of it. [Here's another explanation of that concept](http://www.business-science.io/timeseries-analysis/2017/07/23/tidy-timeseries-analysis-pt-2.html#rolling-window-calculations).
+
 **Bonus assignment:** The output should again be readable as a .csv -file, and thus can be opened in Excel, OpenOffice, Google Sheet, etc. for visualization purposes. Try making a chart out of that, and see how varying the window size affects the results.
 
-**Note:** A window here means gradually moving over the whole text, and focusing on a limited number of lines at a time. So, as a start, we'll consider the first 150 lines of the text, and count the lines satisfying our criteria there. Then we move the window by one line: Now we consider lines 2-151, and count total hits for that subsection of the text. We'll keep on moving the window- lines: 3 to 152, 4 to 153, 5-154, ... 205-354, ... etc, until we reach the end of the text. Thus we have scanned the whole text, and have total number of hits for each subsection of it. [Here's another explanation of that concept](http://www.business-science.io/timeseries-analysis/2017/07/23/tidy-timeseries-analysis-pt-2.html#rolling-window-calculations).
+After running the third part succesfully you should have the data to produce something like this:
+
+![Suddenly charted](./suddenly_chart.png "Suddenly in the Idiot")
