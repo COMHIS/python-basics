@@ -357,7 +357,7 @@ for birth_year in birth_years:
         minors = minors + 1
 ```
 
-On that last line: `minors =` means that we are placing a value in that variable. And the rest of that line: `minors + 1` means, that we are recovering, what was in that variable previously and adding 1 to it. So, the end result is that, the value in our variable grows by one.
+On that last line: `minors =` means that we are placing a value in that variable. And the rest of that line: `minors + 1` means, that we are recovering what was in that variable previously and adding 1 to it. So, the end result is that, the value in our variable grows by one.
 
 ### Iteration 3
 
