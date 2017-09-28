@@ -343,7 +343,7 @@ Now, based on the previous two examples, make a script that finds the total numb
 4. After the loop is finished print out the values in the variables holding the numbers for minors and adults.
   * Remember to pay attention to the indentation! The print -commands should not be inside the loop, so they should have no indentation.
 
-**Hints, in case you get stuck:** Often in programming we encounter situations like above where we have to count items. The typical way to do this is to have a variable that keeps tally of the total, which is modified each time an item is added to the that. So, for the above task:
+**Hints, in case you get stuck:** Often in programming we encounter situations like above where we have to count items. The typical way to do this is to have a variable that keeps tally of the total, which is modified each time an item is added. So, for the above task:
 
 ```python
 # let's create a variable for our minors and start the total at 0:
