@@ -1,6 +1,6 @@
 # Part 3 - Basic concepts in programming II
 
-This part will familiarize you with the second group of basic concepts. After understanding these, you the necessary building blocks for creating scripts on your own. There is still a lot of ground to cover beyond these concepts (one big one in the Python-context being _objects_ and _classes_), but for an aspiring digital humanist, you are basically ready to go.
+This part will familiarize you with the second group of basic concepts. After understanding these, you the necessary building blocks for creating scripts on your own. There is still a lot of ground to cover beyond these concepts (one big one in the Python-context being [_classes_ and _objects_](https://www.learnpython.org/en/Classes_and_Objects)), but for an aspiring digital humanist, you are basically ready to go.
 
 ---
 
