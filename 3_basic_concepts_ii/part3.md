@@ -33,6 +33,35 @@ sentence_as_list = sentence.split(" ")
 print(sentence_as_list)
 ["Introduction", "to", "Digital", "Humanities", "is", "teh", "best", "course", "I", "have", "ever", "been", "to."]
 ```
+To access any element of the list, you refer to it by its location in the list, called index. Like in many programming spheres, in Python the first index is always 0, the second 1 and so on. Element accessing is done by adding square brackets after the lists name, and inside the brackets go the index:
+
+```python
+first_word = sentence_as_list[0]
+```
+In addition to accessing a single element of a list, it is also possible to get a number of different subsets or slices of a list:
+
+```python
+print(sentence_as_list[0:3])
+["Introduction", "to", "Digital"]
+print(sentence_as_list[-1])
+["to."]
+print(sentence_as_list[10:])
+["ever", "been", "to."]
+```
+In many programming languages, one list like object can hold only one (or predefined catalogue) type of variables. In Python this is not restricted and a list can hold any number of different kinds of things:
+
+```python
+miscellania = ["pears", 4, "not there yet", True, True, 0.1234984573]
+```
+Lists can hold even other lists!
+```python
+list_of_lists = [[0,2,3],[1,5,12], ["n/a", 22, 0]]
+```
+A common problem for any Excel-humanist is that the original data might contain in one column two variables. Imagine that you are researching book history and on one column of your otherwise flawless Excel-sheet you have the publication place written in the form of "City, Country". Like "Antwerpen, Netherlands", "Berlin, Germany", "New York, US" and so on. If you would like the get all the cells describing books published in Norway this would be pretty frustrating thing to do, but with Python we can easily fix this:
+
+First we simply copy-paste the whole sheet to a text editor and save the file. Then in python:
+
+         
 
 
 
