@@ -109,6 +109,8 @@ Above, the code block holding the contents of the for-loop also has two smaller 
 
 Think of _code blocks_ as small semi-independent sections of code that have their own small task to perform.  
 
+---
+
 ### Functions
 
 We have been using _functions_ a lot already. Almost every command we've employed so far, from `print()` to `len()` and `quit()` are functions. A function is basically a simple independent program with its own input and output. A function's input are the paramenters that are given to it inside the parenthesis following its name. For example:
@@ -163,6 +165,7 @@ print(is_adult_aino)
 is_adult_maija = is_adult(historic_year=year, bithyear=birthyear_maija)
 print(is_adult_maija)
 ```
+---
 
 ### Iterations II
 
@@ -177,3 +180,9 @@ finding, slicing, splitting, joining, stripping certain characters
 ### Libraries
 
 importing
+
+---
+
+## Excercises
+
+### Functions 1
