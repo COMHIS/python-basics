@@ -13,7 +13,7 @@ In the following we'll cover:
 * **Functions** - small miniprograms inside our script files
 * **Manipulating strings** - manipulating and modifying text variables
 * Some more things on **Iteration** - loops continued
-* External **libraries** - many useful commands are not included in the basic group included with Python, and need to be added separately.
+* Importing **modules** - many useful commands are not included in the basic group included with Python, and need to be added separately.
 
 ---
 
@@ -197,7 +197,7 @@ finding, slicing, splitting, joining, stripping certain characters
 
 ---
 
-### Libraries
+### Modules
 
 In our Dostoyevsky -case previously, we had a line like this at the very top:
 
@@ -219,7 +219,7 @@ from datetime import timezone
 We can also import whole modules if we want to use multiple commands contained in them, or we just don't care that we are bringing in some extra stuff that we won't be using:
 
 ```python 
-# let's load the csv-module to read some data from a table saved as .csv -file
+# Let's load the csv-module to read some data from a table saved as .csv -file
 import csv
 
 # and we'll start using those commands here:
