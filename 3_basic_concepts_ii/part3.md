@@ -101,6 +101,8 @@ my_dict.update({"start_date":"1.9.2017"})
 print(my_dict)
 my_dict = {"name":"Introduction to Digital Humanities", "points": 5, "year":2017, "semester":Autumn, "start_date":"1.9.2017"}
 ```
+A crucial difference compared to lists is that dictionaries are not in any specific order. We will come back to this later when telling how dictionaries are iterated over.
+
 
 A very common computational / corpus linguistic task is to compile a word frequency list out of large text. It is easy to do using a dictionary:
 
@@ -121,7 +123,7 @@ for word in text:                      #while iterating the text as a list of wo
     else:                              #if the word already is as a key in the dictionary,
         word_frequencies[word] += 1    #we just add one to the existing value
 ```
-                                        
+
 **Tuples**
 
 Tuples are the third built-in list like data structure in Python. Tuples are pretty much like list, but they are _inmutable_, which means they cannot be altered after being created. No new items can be added to or removed from them, their order can not be changed et cetera. That's about it, enough said.
@@ -389,8 +391,25 @@ squad,   Colonel   Aureliano
 
 ```
 
+**Iterating dictionaries**
 
+Like said above, items stored in dictionaries are key-value pairs and the values are accessed by their keys (but not the other way round). And also was mentioned before was that keys are not stored in dictionaries in any specific order. This means that if you iterate the same dictionary many times over during your code, the order might be everytime different, or then it might not.
 
+In practice dictionaries are iterated like this:
+
+```python
+my_dict = {"has":34, "is": 59, "a":12}
+
+for key in my_dict:
+    print(key)
+    if my_dict[key] > 50:
+        print("over fifty!")
+        
+a
+is
+over fifty!
+has
+```
 
 
 
