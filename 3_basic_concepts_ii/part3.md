@@ -66,9 +66,16 @@ Lists can hold even other lists!
 ```python
 list_of_lists = [[0,2,3],[1,5,12], ["n/a", 22, 0]]
 ```
-A common problem for any Excel-humanist is that the original data might contain in one column two variables. Imagine that you are researching book history and on one column of your otherwise flawless Excel-sheet you have the publication place written in the form of "City, Country". Like "Antwerpen, Netherlands", "Berlin, Germany", "New York, US" and so on. If you would like the get all the cells describing books published in Norway this would be pretty frustrating thing to do, but with Python we can easily fix this:
+A common problem for any Excel-humanist is that the original data might contain in one column two variables. Imagine that you are researching book history and on one column of your otherwise flawless Excel-sheet you have the publication place written in the form of "City, Country". Like "Antwerpen, Netherlands", "Berlin, Germany", "New York, US" and so on. If you would like the get all the cells describing books published in Norway this would be pretty frustrating thing to do, but with Python we can easily fix this by following the steps:
 
-First we simply copy-paste the whole sheet to a text editor and save the file. Then in python:
+1) copy-paste Excel sheet into a text editor and save it as a .tsv -format file
+2) read the file in python as list of rows
+3) iterate over the list and use split-function to split each row into a list with using tab ("\t") as a separator
+4) now we have the excel sheet as list of lists where each row is represented as a list, in turn containing a list of strings corresponding to columns. We could now access any 
+
+
+
+
 
          
 
