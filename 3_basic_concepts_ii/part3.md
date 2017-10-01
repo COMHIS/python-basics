@@ -220,7 +220,7 @@ It is common for example APIs or syntactic or morphological parser to return the
           "word": "Kulkiivat"
 ```
 
-
+In these structures lists and dictionaries typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
 
 ---
 
@@ -333,15 +333,86 @@ print(is_adult_maija)
 
 ### Iterations II
 
-Antti
-for loop over range(0, whatever)
+Now we can look again the iteration thing, knowing little bit more about the things (list-like-things) we are iterating.
+
+**Iterating lists**
+
+Lists can be iterated in two different ways:
+1) running through all the items in a list
+2) running through list of numbers as long as the list and using those numbers to access elements with corresponding indices in the list
+
+```python
+
+my_string = "Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice."
+my_list = my_string.split(" ")
+
+#method 1: Iterate item by item
+
+for x in my_list:
+    if len(x) > 3:
+        print(x)
+        
+Many
+years
+later
+faced
+...
+
+#method 2: Iterate indices
+
+for i in range(0,len(my_list)):  #NOTE function range(a,b) returns numbers from a to b-1
+    if len(my_list[i]) > 3:
+        print(x)
+        
+
+Many
+years
+later
+faced
+...
+
+```
+
+The main difference between these two is that a list can not be changed while it is being iterated, so we can not remove or add new items to a list with method 1, nor can we change the values in the list.
+
+This restriction is circumvented with method 2, as we are not iterating the list itself, nearly a list of numbers with equal length.
+
+Other reason to use the method 2 would be that it provides a handy way of accessing adjacent items:
+
+```python
+
+for i in range(0, len(my_list)):
+    if my_list[i] == "Colonel":
+        print(my_list[i-1], my_list[i], my_list[i+1])
+
+squad,   Colonel   Aureliano
+
+```
+
+
+
+
+
+
 
 ---
 
 ### String manipulation
 
-Antti
-finding, slicing, splitting, joining, stripping certain characters
+The matter of fact is that strings in Python are little more than lists of characters. Almost all operations that can be done on lists, can be done on strings as well. So certain characters in a string can be accessed by its position, string can be sliced by indices. Also lists and strings utilise the '+' sign in similar way:
+
+```python
+my_string_A = "Hopefully this"
+my_string_B = "is helpful"
+
+my_list_A = ["Hopefully", "this"]
+my_list_B = ["is", "helpful"]
+
+print(my_string_A + my_string_B)
+"Hopefully thisis helpful"
+print(my_list_A + my_list_B)
+["Hopefully", "this", "is", "helpful"]
+```
 
 ---
 
