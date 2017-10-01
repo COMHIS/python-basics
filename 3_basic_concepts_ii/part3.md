@@ -143,7 +143,81 @@ It is common for example APIs or syntactic or morphological parser to return the
 "progress_corpora": ["KLK_FI_1878", "KLK_FI_1879"],
 "progress_0": {"corpus": "KLK_FI_1878", "hits": 6},
 "progress_1": {"corpus": "KLK_FI_1879", "hits": 19},
-"hits":133,"kwic":[{"tokens":[{"ocr":"0.94","word":"Kulkiivat","lemmacomp":"Kulkiivat","pos":"N","nertag":"_","lemma":"Kulkiivat","dephead":"6","nerbio":"O","lex":"|Kulkiivat..nn.1|","msd":"NUM_Pl|CASE_Nom|CASECHANGE_Up|OTHER_UNK","ref":"1","structs":{"open":["sentence"]},"deprel":"nsubj"},{"ocr":"0.93","word":"vaiva","lemmacomp":"vaiva","pos":"N","nertag":"_","lemma":"vaiva","dephead":"1","nerbio":"O","lex":"|vaiva..nn.1|","msd":"NUM_Sg|CASE_Nom","ref":"2","deprel":"nommod"},{"ocr":"0.99","word":"(","lemmacomp":"(","pos":"Punct","nertag":"_","lemma":"(","dephead":"4","nerbio":"O","lex":"|(..xx.1|","msd":"_","ref":"3","deprel":"punct"},{"ocr":"0.99","word":"K.","lemmacomp":"K.","pos":"N","nertag":"_","lemma":"K.","dephead":"2","nerbio":"O","lex":"|K...nn.1|","msd":"SUBCAT_Abbr|CASECHANGE_Up|OTHER_UNK","ref":"4","deprel":"appos"},{"ocr":"0.99","word":")","lemmacomp":")","pos":"Punct","nertag":"_","lemma":")","dephead":"4","nerbio":"O","lex":"|)..xx.1|","msd":"_","ref":"5","deprel":"punct"},{"ocr":"0.99","word":"kulkivat","lemmacomp":"kulkea","pos":"V","nertag":"_","lemma":"kulkea","dephead":"0","nerbio":"O","lex":"|kulkea..vb.1|","msd":"PRS_Pl3|VOICE_Act|TENSE_Prt|MOOD_Ind","ref":"6","deprel":"ROOT"},{"ocr":"0.99","word":"vaivoin","lemmacomp":"vaiva","pos":"N","nertag":"_","lemma":"vaiva","dephead":"6","nerbio":"O","lex":"|vaiva..nn.1|","msd":"NUM_Pl|CASE_Ins","ref":"7","deprel":"nommod"},{"ocr":"0.96","word":"t.","lemmacomp":"t.","pos":"Num","nertag":"_","lemma":"t.","dephead":"6","nerbio":"O","lex":"|t...rg.1|","msd":"OTHER_UNK","ref":"8","deprel":"nommod"},{"ocr":"0.99","word":"suurella","lemmacomp":"suuri","pos":"A","nertag":"_","lemma":"suuri","dephead":"10","nerbio":"O","lex":"|suuri..jj.1|","msd":"NUM_Sg|CASE_Ade|CMP_Pos","ref":"9","deprel":"amod"},{"ocr":"0.99","word":"vaivalla","lemmacomp":"vaiva","pos":"N","nertag":"_","lemma":"vaiva","dephead":"6","nerbio":"O","lex":"|vaiva..nn.1|","msd":"NUM_Sg|CASE_Ade","ref":"10","deprel":"nommod"},{"ocr":"0.99","word":".","lemmacomp":".","pos":"Punct","nertag":"_","lemma":".","dephead":"6","nerbio":"O","lex":"|...xx.1|","msd":"_","ref":"11","structs":{"close":["sentence","paragraph"]},"deprel":"punct"}],"corpus":"KLK_FI_1879","structs":{"text_issue_no":"13","text_publ_title":"Suomi","paragraph_id":"2","text_issue_title":"SUOMI","sentence_local_id":"8","text_sentcount":"23","text_language":"fi","text_issue_date":"1879","text_img_url":"#DIRECTORY#0355-0257_1879_13#SEPARATOR#00063.#EXTENSION#","text_label":"SUOMI no. 13 1879","sentence_id":"1318","text_publ_id":"0355-0257","text_publ_type":"aikakausi","sentence_parse_state":"parsed","text_binding_id":"498462","text_tokencount":"345","text_elec_date":"2007-03-27","text_page_no":"63"},"match":{"position":16870,"end":2,"start":1}},{"tokens":[{"ocr":"0.82","word":"Waiwais","lemmacomp":"Waiwais","pos":"N","nertag":"_","lemma":"Waiwais","dephead":"0","nerbio":"O","lex":"|Waiwais..nn.1|","msd":"SUBCAT_Prop|NUM_Sg|CASE_Nom|CASECHANGE_Up|OTHER_UNK","ref":"1","structs":{"open":["sentence"]},"deprel":"ROOT"},{"ocr":"0.82","word":"\u00bb","lemmacomp":"\u00bb","pos":"Punct","nertag":"_","lemma":"\u00bb","dephead":"1","nerbio":"O","lex":"|\u00bb..xx.1|","msd":"_","ref":"2","deprel":"punct"},{"ocr":"0.93","word":"ja","lemmacomp":"ja","pos":"C","nertag":"_","lemma":"ja","dephead":"1","nerbio":"O","lex":"|ja..kn.1|","msd":"SUBCAT_CC","ref":"3","deprel":"cc"},{"ocr":"0.88","word":"Ty\u00f6huonerahasto","lemmacomp":"ty\u00f6huone|rahasto","pos":"N","nertag":"EnamexOrgCrp/","lemma":"ty\u00f6huonerahasto","dephead":"1","nerbio":"B","lex":"|ty\u00f6huonerahasto..nn.1|","msd":"NUM_Sg|CASE_Nom|CASECHANGE_Up","ref":"4","structs":{"close":["ne_placename_source","ne_placename","ne_subtype","ne_type","ne_ex","ne_fulltype","ne_name"],"open":["ne_name Ty\u00f6huonerahasto","ne_fulltype EnamexOrgCrp","ne_ex ENAMEX","ne_type ORG","ne_subtype CRP","ne_placename ","ne_placename_source "]},"deprel":"conj"},
+
+  "corpus_hits": {
+    "KLK_FI_1870": 14, 
+    "KLK_FI_1871": 9, 
+    "KLK_FI_1872": 9, 
+    "KLK_FI_1873": 13, 
+    "KLK_FI_1874": 9, 
+    "KLK_FI_1875": 14, 
+    "KLK_FI_1876": 23, 
+    "KLK_FI_1877": 10, 
+    "KLK_FI_1878": 13, 
+    "KLK_FI_1879": 19, 
+    "REITTIDEMO": 0
+  }, 
+  "corpus_order": [
+    "KLK_FI_1879", 
+    "KLK_FI_1878", 
+    "KLK_FI_1877", 
+    "KLK_FI_1876", 
+    "KLK_FI_1875", 
+    "KLK_FI_1874", 
+    "KLK_FI_1873", 
+    "KLK_FI_1872", 
+    "KLK_FI_1871", 
+    "KLK_FI_1870", 
+    "REITTIDEMO"
+  ], 
+  "hits": 133, 
+  "kwic": [
+    {
+      "corpus": "KLK_FI_1879", 
+      "match": {
+        "end": 2, 
+        "position": 16870, 
+        "start": 1
+      }, 
+      "structs": {
+        "paragraph_id": "2", 
+        "sentence_id": "1318", 
+        "sentence_local_id": "8", 
+        "sentence_parse_state": "parsed", 
+        "text_binding_id": "498462", 
+        "text_elec_date": "2007-03-27", 
+        "text_img_url": "#DIRECTORY#0355-0257_1879_13#SEPARATOR#00063.#EXTENSION#", 
+        "text_issue_date": "1879", 
+        "text_issue_no": "13", 
+        "text_issue_title": "SUOMI", 
+        "text_label": "SUOMI no. 13 1879", 
+        "text_language": "fi", 
+        "text_page_no": "63", 
+        "text_publ_id": "0355-0257", 
+        "text_publ_title": "Suomi", 
+        "text_publ_type": "aikakausi", 
+        "text_sentcount": "23", 
+        "text_tokencount": "345"
+      }, 
+      "tokens": [
+        {
+          "dephead": "6", 
+          "deprel": "nsubj", 
+          "lemma": "Kulkiivat", 
+          "lemmacomp": "Kulkiivat", 
+          "lex": "|Kulkiivat..nn.1|", 
+          "msd": "NUM_Pl|CASE_Nom|CASECHANGE_Up|OTHER_UNK", 
+          "nerbio": "O", 
+          "nertag": "_", 
+          "ocr": "0.94", 
+          "pos": "N", 
+          "ref": "1", 
+          "structs": {
+            "open": [
+              "sentence"
+            ]
+          }, 
+          "word": "Kulkiivat"
 ```
 
 
