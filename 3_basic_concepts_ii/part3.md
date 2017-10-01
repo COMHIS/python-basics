@@ -71,10 +71,58 @@ A common problem for any Excel-humanist is that the original data might contain 
 1) copy-paste Excel sheet into a text editor and save it as a .tsv -format file
 2) read the file in python as list of rows
 3) iterate over the list and use split-function to split each row into a list with using tab ("\t") as a separator
-4) now we have the excel sheet as list of lists where each row is represented as a list, in turn containing a list of strings corresponding to columns. We could now access any 
+4) now we have the excel sheet as list of lists where each row is represented as a list, in turn containing a list of strings corresponding to columns. We could now access any any cell in the sheet by its coordinates: sheet[3][4] would return the value in the 5th column of the 4th row.
+5) the we will iterate over the rows and use replace()-function to change comma (",") to a tab ("\t") in the "publisher"-field we wanted to split and join the row back to a single string with join()-function.
+6) now when we join() the rows back together and write the result to a file. When we open the tsv-file in text editor, we can then copy-paste it back to Excel.
 
+Lists are mutable which means that they can be changed on the go. You can add more elements to a list or remove them. You can count how many times a specific element occurs in the list and so on. 
 
+**Dictionaries**
 
+Dictionaries can be thought like a special type of list, where items in the list are not accessed by indices but by specific _keys_. Key is a name given to a specific value.
+
+```python
+my_dict = {"name":"Introduction to Digital Humanities", "points": 5, "year":2017}
+```
+Like with lists, you can add any kinds of data to a dictionary. Keys must always be strings or integers, but values may be other dictionaries or lists or nested combinations of these.
+
+Accessing dictionary items by key is done like this:
+
+```python
+print(my_dict["name"])
+Introduction to  Digital Humanities
+```
+ 
+If you want to add a new key-value pair to a dictionary, you can simply assign the key or use update()-function:
+
+```python
+my_dict["semester"] = "Autumn"
+my_dict.update({"start_date":"1.9.2017"})
+print(my_dict)
+my_dict = {"name":"Introduction to Digital Humanities", "points": 5, "year":2017, "semester":Autumn, "start_date":"1.9.2017"}
+```
+
+A very common computational / corpus linguistic task is to compile a word frequency list out of large text. It is easy to do using a dictionary:
+
+```python
+text=open_text_data("dostoyevsky.txt") #let's presume we have a custom function 
+                                        that open the Dostoyevsky text file for 
+                                        us as a large string obejct called 'text'
+                                        
+text = text.split(" ")                 #here we split the text in to a list of words
+
+word_frequencies = {}                  #let's create an empty dictionary
+
+for word in text:                      #while iterating the text as a list of words
+    if word not in word_frequencies:   #if we encounter a new word, we assign a key for it
+        word_frequencies[word] = 1      in the dictionary with value 1 (as this is the first time
+                                        this word is seen)
+        
+    else:                              #if the word already is as a key in the dictionary,
+        word_frequencies[word] += 1    #we just add one to the existing value
+```
+                                        
+                                       
 
 
          
