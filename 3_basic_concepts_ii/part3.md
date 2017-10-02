@@ -31,10 +31,10 @@ First, have a look at the code as it is, to get a general overview of it. No nee
 
 To get a feel of where are we heading try running the code also. We're applying the methods to another source text now, namely "The Brothers Karamazov". Do as you did previously, and save [intros.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/intros.py) and [dostoyevsky_concordance.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/dostoyevsky_2grams.py) into a new directory, and use python to run `dostoyevsky_2grams.py`.
 
----
 
 Now, lets break to code down, a section at a time, and have a look at what is going on. Look at the code first, read the immediate explanation and go through the link to get a hopefully more clear and thorough breakdown of what is going on.
 
+---
 
 ### Importing
 
@@ -60,6 +60,8 @@ search_term = 'suddenly'
 ```
 
 Refer back to [Part 2](../2_basic_concepts/part2.md) for explanation on variables, if you need to.
+
+---
 
 ### Functions and code blocks
 

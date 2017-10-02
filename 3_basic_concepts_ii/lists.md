@@ -109,10 +109,27 @@ for word in text:                      #while iterating the text as a list of wo
 
 A dictionary in Python is a lot like a dictionary in real life: You have one key (entry in a dictionary, "The Enlightenment", for example), and a value corresponding to that key (the text that tells what the Enlightenment was all about). Keys are always unique: You can't have a dictionary with two identical keys, and if you try to add a new entry with the same key you end up overwriting the old one.
 
-There are often situations in which we are interested in knowing the unique values in a given list or group of items. For example:
+There are often situations in which we are interested in knowing the unique values in a given list or group of items. Say we have a list of words with many words occuring multiple times. We'll just want to know all the words occuring in that list and are not interested in how many times they do occur. A set comes handy here, as is very similar to dictionary keys: each value in it is unique:
 
 ```python
+list_of_words = ["free", "banana", "key", "ambition", "the", "banana", "catacombs", "banana", "the"]
+set_of_above_words = set(list_of_words)
+print(set_of_above_words)
+# {'key', 'free', 'ambition', 'the', 'banana', 'catacombs'}
 ```
+
+Sets can be added into and removed from, among other things:
+
+```python
+set_of_words = {'key', 'free', 'ambition', 'the', 'banana', 'catacombs'}
+set_of_words.remove("banana")
+set_of_words
+# {'key', 'free', 'ambition', 'the', 'catacombs'}
+set_of_words.add("mango")
+set_of_words
+# {'key', 'free', 'ambition', 'the', 'catacombs', 'mango'}
+```
+
 
 **JSON and Complicated Data Structures**
 
@@ -200,4 +217,5 @@ It is common for example APIs or syntactic or morphological parser to return the
           "word": "Kulkiivat"
 ```
 
-In these structures lists and dictionaries typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
+In these structures lists and dictionari---
+es typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
