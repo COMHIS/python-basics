@@ -15,8 +15,8 @@ In the following we'll cover:
 * [**Lists and dictionaries**](./lists.md) - two data types that are extremely useful in storing data within a script
 * [**Indentations / Code blocks**](./codeblocks.md) - the way to create subsections in script
 * [**Functions**](./functions.md) - small mini programs inside our script files
-* **Manipulating strings** - manipulating and modifying text variables
-* Some more things on **Iteration** - loops continued
+* [**Manipulating strings**](./string_manipulation.md) - manipulating and modifying text variables
+* Some more things on [**Iteration**](./iterations2.md) - loops continued
 * [**Importing modules**](./importing.md) - many useful commands are not included in the basic group included with Python, and need to be added separately.
 
 ---
