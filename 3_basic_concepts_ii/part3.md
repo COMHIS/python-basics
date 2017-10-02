@@ -27,7 +27,7 @@ We'll go thought these concepts by going back to our [Dostoyevsky example](../2_
 
 First, have a look at the code as it is, to get a general overview of it. No need to understand everything just yet:
 
-[dostoyevsky_2grams.py](./dostoyevsky_2grams.py)
+[dostoyevsky_2grams.py](./dostoyevsky_2grams.py#L18-L20)
 
 To get a feel of where are we heading try running the code also. We're applying the methods to another source text now, namely "The Brothers Karamazov". Do as you did previously, and save [intros.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/intros.py) and [dostoyevsky_concordance.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/dostoyevsky_2grams.py) into a new directory, and use python to run `dostoyevsky_2grams.py`.
 
@@ -46,7 +46,7 @@ from intros import (read_txt_file_to_list,
 import string
 ```
 
-**Read more:** [Importing modules and functions](./modules.md)
+**Read more:** [Importing modules and functions](./importing.md)
 
 ---
 
