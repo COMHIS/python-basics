@@ -8,330 +8,125 @@ This part will familiarize you with the second group of basic concepts. After un
 
 In the following we'll cover:
 
-* **Lists and dictionaries** - two datatypes that are extremely useful in storing data within a script
-* **Indentations / Code blocks** - the way to create subsections in script
-* **Functions** - small miniprograms inside our script files
+* [**Lists and dictionaries**](./lists.md) - two datatypes that are extremely useful in storing data within a script
+* [**Indentations / Code blocks**](./codeblocks.md) - the way to create subsections in script
+* [**Functions**](./functions.md) - small miniprograms inside our script files
 * **Manipulating strings** - manipulating and modifying text variables
 * Some more things on **Iteration** - loops continued
 * Importing **modules** - many useful commands are not included in the basic group included with Python, and need to be added separately.
 
 ---
 
-### Lists and dictionaries
+We'll go thought thse concepts by going back to our [Dostojevsky example](../2_basic_concepts/suddenly.md) from the previous part. Instead of looking at the concordance lines with 'suddenly' we'll now dig out so called [2-grams](http://text-analytics101.rxnlp.com/2014/11/what-are-n-grams.html), that is to say, the text split into 2 word sequences.
 
-The reason why programming is such a useful thing to learn, is that you are very soon able to automatise repetitive tasks. The amount of time you spend writing the code does not depend on the size of your dataset, and for most simpler tasks the computer can run through thousands of rows of data in seconds.
+First, have a look at the code as it is, to get a general overview of it. No need to understand everything just yet:
 
-In order to get acquainted with handling datasets and their manipulation, we first take a look at the most common data structures implemented in Python to hold more variables than just one. They are called _lists_, _dictionaries_ and _tuples_.
-
-Basically their idea is the same: you can refer to whole bunch of variables with just one name! Their differences comes from how you operate them and access the variables put into them.
-
-#### List
-
-List is simply just a batch, row, line, set or _list_ of things. Items in a list have order, and can be accessed by index based on that order, but that's about it.
-
-A list in Python code is usually defined by encasing items in the list with square brackets and using comma as a separator.
-Example here
-```python
-my_list = [1, 5, 8, 22, 4, 11]
-```
-would produce a list containing integers 1,5,8,22,4 and 11 in this order. Many useful functions return lists as their outcome, so for example very nifty _split_ function splits strings into lists. This way we can operate for example sentences as a list of words:
-
-```python
-sentence = "Introduction to Digital Humanities is teh best course I have ever been to."
-sentence_as_list = sentence.split(" ")
-print(sentence_as_list)
-["Introduction", "to", "Digital", "Humanities", "is", "teh", "best", "course", "I", "have", "ever", "been", "to."]
-```
-To access any element of the list, you refer to it by its location in the list, called index. Like in many programming spheres, in Python the first index is always 0, the second 1 and so on. Element accessing is done by adding square brackets after the lists name, and inside the brackets go the index:
-
-```python
-first_word = sentence_as_list[0]
-```
-In addition to accessing a single element of a list, it is also possible to get a number of different subsets or slices of a list:
-
-```python
-print(sentence_as_list[0:3])
-["Introduction", "to", "Digital"]
-print(sentence_as_list[-1])
-["to."]
-print(sentence_as_list[10:])
-["ever", "been", "to."]
-```
-In many programming languages, one list like object can hold only one (or predefined catalogue) type of variables. In Python this is not restricted and a list can hold any number of different kinds of things:
-
-```python
-miscellania = ["pears", 4, "not there yet", True, True, 0.1234984573]
-```
-Lists can hold even other lists!
-```python
-list_of_lists = [[0,2,3],[1,5,12], ["n/a", 22, 0]]
-```
-A common problem for any Excel-humanist is that the original data might contain in one column two variables. Imagine that you are researching book history and on one column of your otherwise flawless Excel-sheet you have the publication place written in the form of "City, Country". Like "Antwerpen, Netherlands", "Berlin, Germany", "New York, US" and so on. If you would like the get all the cells describing books published in Norway this would be pretty frustrating thing to do, but with Python we can easily fix this by following the steps:
-
-1) copy-paste Excel sheet into a text editor and save it as a .tsv -format file
-2) read the file in python as list of rows
-3) iterate over the list and use split-function to split each row into a list with using tab ("\t") as a separator
-4) now we have the excel sheet as list of lists where each row is represented as a list, in turn containing a list of strings corresponding to columns. We could now access any any cell in the sheet by its coordinates: sheet[3][4] would return the value in the 5th column of the 4th row.
-5) the we will iterate over the rows and use replace()-function to change comma (",") to a tab ("\t") in the "publisher"-field we wanted to split and join the row back to a single string with join()-function.
-6) now when we join() the rows back together and write the result to a file. When we open the tsv-file in text editor, we can then copy-paste it back to Excel.
-
-Lists are mutable which means that they can be changed on the go. You can add more elements to a list or remove them. You can count how many times a specific element occurs in the list or sort a list based on whichever criteria you see fit. And so on.
-
-**Dictionaries**
-
-Dictionaries can be thought like a special type of list, where items in the list are not accessed by indices but by specific _keys_. Key is a name given to a specific value.
-
-```python
-my_dict = {"name":"Introduction to Digital Humanities", "points": 5, "year":2017}
-```
-Like with lists, you can add any kinds of data to a dictionary. Keys must always be strings or integers, but values may be other dictionaries or lists or nested combinations of these.
-
-Accessing dictionary items by key is done like this:
-
-```python
-print(my_dict["name"])
-Introduction to  Digital Humanities
-```
- 
-If you want to add a new key-value pair to a dictionary, you can simply assign the key or use update()-function:
-
-```python
-my_dict["semester"] = "Autumn"
-my_dict.update({"start_date":"1.9.2017"})
-print(my_dict)
-my_dict = {"name":"Introduction to Digital Humanities", "points": 5, "year":2017, "semester":Autumn, "start_date":"1.9.2017"}
-```
-A crucial difference compared to lists is that dictionaries are not in any specific order. We will come back to this later when telling how dictionaries are iterated over.
-
-
-A very common computational / corpus linguistic task is to compile a word frequency list out of large text. It is easy to do using a dictionary:
-
-```python
-text=open_text_data("dostoyevsky.txt") #let's presume we have a custom function 
-                                        that open the Dostoyevsky text file for 
-                                        us as a large string obejct called 'text'
-                                        
-text = text.split(" ")                 #here we split the text in to a list of words
-
-word_frequencies = {}                  #let's create an empty dictionary
-
-for word in text:                      #while iterating the text as a list of words
-    if word not in word_frequencies:   #if we encounter a new word, we assign a key for it
-        word_frequencies[word] = 1      in the dictionary with value 1 (as this is the first time
-                                        this word is seen)
-        
-    else:                              #if the word already is as a key in the dictionary,
-        word_frequencies[word] += 1    #we just add one to the existing value
-```
-
-**Tuples**
-
-Tuples are the third built-in list like data structure in Python. Tuples are pretty much like list, but they are _inmutable_, which means they cannot be altered after being created. No new items can be added to or removed from them, their order can not be changed et cetera. That's about it, enough said.
-
-Very seldom you need tuples for anything. Tuples are faster that lists and take less space in the memory, but you have to deal with quite big datasets before this becomes an issue. If you use functions from libraries made by someone else, they sometimes return the result as a tuple so it is good to know what they are.
-
-A tuple is created using normal brackets:
-
-```python
-my_tuple = ("IF Gnistan", 1924, "Oulunkylä", "Åggelby")
-```
-
-**JSON and Complicated Data Structures**
-
-It is common for example APIs or syntactic or morphological parser to return the data they have provided for you in so-called JSON-format. JSON data structures are practically identical to Python data strcutures and the notation is the same. So if you, for example, use the KORP corpus interfaces API, it will return something like this:
-
-```json
-{
-"progress_corpora": ["KLK_FI_1878", "KLK_FI_1879"],
-"progress_0": {"corpus": "KLK_FI_1878", "hits": 6},
-"progress_1": {"corpus": "KLK_FI_1879", "hits": 19},
-
-  "corpus_hits": {
-    "KLK_FI_1870": 14, 
-    "KLK_FI_1871": 9, 
-    "KLK_FI_1872": 9, 
-    "KLK_FI_1873": 13, 
-    "KLK_FI_1874": 9, 
-    "KLK_FI_1875": 14, 
-    "KLK_FI_1876": 23, 
-    "KLK_FI_1877": 10, 
-    "KLK_FI_1878": 13, 
-    "KLK_FI_1879": 19, 
-    "REITTIDEMO": 0
-  }, 
-  "corpus_order": [
-    "KLK_FI_1879", 
-    "KLK_FI_1878", 
-    "KLK_FI_1877", 
-    "KLK_FI_1876", 
-    "KLK_FI_1875", 
-    "KLK_FI_1874", 
-    "KLK_FI_1873", 
-    "KLK_FI_1872", 
-    "KLK_FI_1871", 
-    "KLK_FI_1870", 
-    "REITTIDEMO"
-  ], 
-  "hits": 133, 
-  "kwic": [
-    {
-      "corpus": "KLK_FI_1879", 
-      "match": {
-        "end": 2, 
-        "position": 16870, 
-        "start": 1
-      }, 
-      "structs": {
-        "paragraph_id": "2", 
-        "sentence_id": "1318", 
-        "sentence_local_id": "8", 
-        "sentence_parse_state": "parsed", 
-        "text_binding_id": "498462", 
-        "text_elec_date": "2007-03-27", 
-        "text_img_url": "#DIRECTORY#0355-0257_1879_13#SEPARATOR#00063.#EXTENSION#", 
-        "text_issue_date": "1879", 
-        "text_issue_no": "13", 
-        "text_issue_title": "SUOMI", 
-        "text_label": "SUOMI no. 13 1879", 
-        "text_language": "fi", 
-        "text_page_no": "63", 
-        "text_publ_id": "0355-0257", 
-        "text_publ_title": "Suomi", 
-        "text_publ_type": "aikakausi", 
-        "text_sentcount": "23", 
-        "text_tokencount": "345"
-      }, 
-      "tokens": [
-        {
-          "dephead": "6", 
-          "deprel": "nsubj", 
-          "lemma": "Kulkiivat", 
-          "lemmacomp": "Kulkiivat", 
-          "lex": "|Kulkiivat..nn.1|", 
-          "msd": "NUM_Pl|CASE_Nom|CASECHANGE_Up|OTHER_UNK", 
-          "nerbio": "O", 
-          "nertag": "_", 
-          "ocr": "0.94", 
-          "pos": "N", 
-          "ref": "1", 
-          "structs": {
-            "open": [
-              "sentence"
-            ]
-          }, 
-          "word": "Kulkiivat"
-```
-
-In these structures lists and dictionaries typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
+[dostoyevsky_2grams.py](./dostoyevsky_2grams.py)
 
 ---
 
-### Indentation / Blocks of code
+Now, lets break to code down, a section at a time, and have a look at what is going on.
 
-With the conditional statements (if & else) and iterations (for -loops) we encountered indented code. An example from last part would looked like this:
 
-```python
-ages = []
-for member in member_registry:
-    birth_date = member["birth_date"]
-    age = date(1944, 9, 19) - date(birth_date)
-    ages.append(age)
-```
+### Importing
 
-Everything indented together on the same level of indentation constitutes a _code block_, that is to say, a series of commands grouped together. The block starts with a line ending with colon `:`, which is typically a conditional statement, loop or a function definition (more on those next). The block ends when there's a line that is not indented. Like this:   
+At the very top, we import some functions and modules that we will be using later in the code: 
 
 ```python
-ages = []
-for member in member_registry:
-    birth_date = member["birth_date"]
-    age = date(1944, 9, 19) - date(birth_date)
-    ages.append(age)
-print(ages)
+from intros import (read_txt_file_to_list,
+                    write_dict_to_csvfile)
+import string
 ```
 
-Lines from `birth_date ...` to `ages.append(age)`are part of the code block insode the for -loop. The final `print(ages)` -command is not part of the block.
+**Read more:** [Importing modules and functions](./modules.md)
 
-A code block can be inside another code block, like we saw in the last examples of the previous part:
+### Variables 
+
+After that, we define a few variables that we'll use for our inputdata and the term that we are going to construct the 2-grams around:
 
 ```python
-birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
-
-for birth_year in birth_years:
-    age = 1944 - birth_year
-    if age > 17:
-        print("Adult")
-    else:
-        print("Minor")
+inputfile = "brothers_karamazov.txt"
+search_term = 'suddenly'
 ```
 
-Above, the code block holding the contents of the for-loop also has two smaller 1-line blocks inside it: the `print("Adult")` and the `print("Minor")` blocks are contained within the block for the loop.
+Refer back to [Part 2](../2_basic_concepts/part2.md) for explanation on variables, if you need to.
 
-Think of _code blocks_ as small semi-independent sections of code that have their own small task to perform.  
+### Functions and code blocks
+
+Next, we'll create a function to help us with changing our to data to conform with what we need for constructing our 2-grams.
+
+```python
+def strip_punctuation(text):
+    # strip out all punctuation characters
+    exclude_characters = set(string.punctuation)
+    # some add additional characters we want to strip
+    exclude_characters = exclude_characters.union(set("“”"))
+    for character in exclude_characters:
+        text = text.replace(character, "")
+    return text
+```
+
+In the function we use the `string` -module we imported earlier, to get a ready list of punctuation characters. We will use the function we have defined soon.
+
+**Read more:** [Code blocks (or indentation)](./codeblocks.md)
+
+**Read more:** [Functions](./functions.md)
+
+### Lists
+
+Then, we'll prepare our data and modify it to fit into the kind of Python data structures that we need for our analysis steps.
+
+First, read the text source file and make a _list_ of lines using the function we imported at the start of the script.
+
+```python
+# Read text file into a list
+lines = read_txt_file_to_list(inputfile)
+```
+
+Then we'll use a function called `.join()` to combine those lines into one long _string_. The `''` at the start means that the lines are joined by an _empty string_ - meaning that we add nothing between each line. If we had `'  '` there, we'd add two spaces between each line, etc.
+
+```python
+# Join all the separate lines of text into one string
+text_combined = ''.join(lines)
+```
+
+We are not interested in capitalization, and want to match both upper and lower case words, so we make everything lowercase.
+
+```python
+# make everything lowercase
+text_combined = text_combined.lower()
+```
+
+We'll use the function that we defined earlier to remove punctuation characters (such as: , . ! ? etc.) from the text. We really are interested in the actual words only this time. 
+
+```python
+# strip punctuation
+text_combined = strip_punctuation(text_combined)
+```
+
+Next, being happy with how we've modified the text, we will break it down to a list. Our list will be all the words of the book, in sequence and  changed to lower case. A section of it looks like this: `['have', 'married', 'such', 'a', 'worthless', 'puny', 'weakling', 'as', 'we', 'all', 'called', 'him', 'i', 'won’t', 'attempt', 'to', 'explain', 'i', 'knew', 'a']`
+
+```python
+# Create text tokens - that is, a list of all the words in th text
+text_tokens = text_combined.split()
+```
+
+We'll also create an empty list to hold our results. We'll soon add to it using the `.append()` -function.
+
+```python
+# create an empty list
+tokens_with_search_term_preceding = []
+```
+
+**Read more:** [Lists (and dictionaries)](./lists.md)
+
 
 ---
 
-### Functions<a name="intro_functions"></a>
 
-We have been using _functions_ a lot already. Almost every command we've employed so far, from `print()` to `len()` and `quit()` are functions. A function is basically a simple independent program with its own input and output. A function's input are the paramenters that are given to it inside the parenthesis following its name. For example:
-
-```python
-print("Some text!")  
-```
-
-The `print()` -function above was given a string with the text "Some text!" as an input. The output of that is printing that text in terminal. Another example would be:
-
-```python
-string_length = len("Another string of text.")
-print(string_length)
-```
-
-The function `len()` is given a string as a parameter. That function counts
-length of various objects, in this case that string. The output of the function (23) is then stored in the variable `string_length`. That variable is in turn given to the familiar funtion `print()` as an input, and printed out, like we would expect print to do.
-
-#### Defining your own functions
-
-As mentioned before, the benefit of writing a program to do some task is that we can automate a repeating task. That holds for parts of those programs too. Say, of we wanted to take the previous birthyear- example and test for the adulthood/minority for a variety of years in time, we would end up writing the same code multiple times. A solution is to write a function of our own: We want to create a single command that is given a birthyear and a historic year as parameters, and that tells us if that person was an adult or not on that specific year. So, let's do that:
-
-```python
-def is_adult(birthyear, historic_year):
-    if historic_year - birthyear > 17:
-        return True
-    else:
-        return False 
-```
-
-So, what happens in the above code? We start with a line that tells Python that we are defining a function. That's the `def` -command there. Then we give the name of the function that we are creatign `is_adult`, and the parameters that it accepts: `(birthyear, historic_year)`. We finish with `:` to tell Python that we are starting a code block whit the actual things that the function does.
-
-Within the function we compare the two variables that are given to it as parameters, and with the `return()` command tell what the output will be. So, if the age of the person on the given year is greater than 17, our function returns the value `True`, and otherwise it returns the value `False`.
-
-We would use our function in our script like this:
-
-```python
-def is_adult(birthyear, historic_year):
-    if historic_year - birthyear > 17:
-        return True
-    else:
-        return False 
-
-
-birthyear_aino = 1922
-birthyear_maija = 1933
-year = 1945
-
-# The following places True in is_adult_aino 
-# functions are given the parameters in the same order as
-# they were in the definion.
-is_adult_aino = is_adult(birthyear_aino, year)
-# let's print that too ...
-print(is_adult_aino)
-
-# And this one is False ...
-# alternatively you can give parameters by specifying their names
-# when calling the function. In that case, the order does not matter
-is_adult_maija = is_adult(historic_year=year, bithyear=birthyear_maija)
-print(is_adult_maija)
-```
 ---
+
+
 
 ### Iterations II
 
@@ -435,38 +230,7 @@ print(my_list_A + my_list_B)
 
 ---
 
-### Modules
 
-In our Dostoyevsky -case previously, we had a line like this at the very top:
-
-```python
-from intros import read_txt_file_to_list
-```
-
-On that line we imported the command `read_txt_file_to_list` from another python -file, namely intros.py - note how the import command started with `from intros import ...`, pretty clear English, right? After importing, the function can now be used in our current script. That we did, on line 13 of [dostoyevsky1.py](../2_basic_concepts/dostoyevsky1.py).
-
-Why is this importing useful then? Why didn't we just define the functions in [intros.py](../2_basic_concepts/intros.py) in the same script file as the rest of the code? There are a few good reasons to do this: First one is that very fast, one script file becomes rather big, and having all the code in one location can get messy fast. But the main reason is that we'll want to reuse many of the functions that we've written in multiple scripts. A general function for reading or writing text files, like the ones in intros.py, can be useful in a lot of different scripts. Therefore keeping them in a separate "module" of commands to be imported when needed can help us keep better organized, and save a lot of cutting and pasting. 
-
-In addition to importing commands that we have created ourselves, like in the above case, we'll also be importing commands from modules written by others. There's a big collection of modules called [Python standard library](https://docs.python.org/3/library/index.html), that will carry us a long way. A few examples are: `csv` and `json` for parsing and writing structured data (think Excel) `datetime` for operating with dates, and `os` for operating with the computer filesystem (among other things). Commands from these modules are imported in a similar way:
-
-```python 
-# we're importing commands for dealing with timezones from datetime:
-from datetime import timezone
-```
-
-We can also import whole modules if we want to use multiple commands contained in them, or we just don't care that we are bringing in some extra stuff that we won't be using:
-
-```python 
-# Let's load the csv-module to read some data from a table saved as .csv -file
-import csv
-
-# and we'll start using those commands here:
-with open('some.csv', newline='') as csvfile:
-    reader = csv.reader(csvfile)
-    for row in reader:
-        print(row)
-...
-```
 
 
 ---
