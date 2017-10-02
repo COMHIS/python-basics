@@ -2,30 +2,38 @@
 
 This part will familiarize you with the second group of basic concepts. After understanding these, you are in theory ready to go. There is still a lot of ground to cover beyond these concepts, but for an aspiring digital humanist, you are basically ready to go.
 
+## Important reminder
+
+The basic logic of programming applies again. Input-> blahblah-> output
+
 ---
 
 ## Concepts to be covered
 
 In the following we'll cover:
 
-* [**Lists and dictionaries**](./lists.md) - two datatypes that are extremely useful in storing data within a script
+* [**Lists and dictionaries**](./lists.md) - two data types that are extremely useful in storing data within a script
 * [**Indentations / Code blocks**](./codeblocks.md) - the way to create subsections in script
-* [**Functions**](./functions.md) - small miniprograms inside our script files
+* [**Functions**](./functions.md) - small mini programs inside our script files
 * **Manipulating strings** - manipulating and modifying text variables
 * Some more things on **Iteration** - loops continued
-* Importing **modules** - many useful commands are not included in the basic group included with Python, and need to be added separately.
+* [**Importing modules**](./importing.md) - many useful commands are not included in the basic group included with Python, and need to be added separately.
 
 ---
 
-We'll go thought thse concepts by going back to our [Dostojevsky example](../2_basic_concepts/suddenly.md) from the previous part. Instead of looking at the concordance lines with 'suddenly' we'll now dig out so called [2-grams](http://text-analytics101.rxnlp.com/2014/11/what-are-n-grams.html), that is to say, the text split into 2 word sequences.
+### Overview
+
+We'll go thought these concepts by going back to our [Dostoyevsky example](../2_basic_concepts/suddenly.md) from the previous part. Instead of looking at the concordance lines with 'suddenly' we'll now dig out so called [2-grams](http://text-analytics101.rxnlp.com/2014/11/what-are-n-grams.html), that is to say, the text split into 2 word sequences.
 
 First, have a look at the code as it is, to get a general overview of it. No need to understand everything just yet:
 
 [dostoyevsky_2grams.py](./dostoyevsky_2grams.py)
 
+To get a feel of where are we heading try running the code also. We're applying the methods to another source text now, namely "The Brothers Karamazov". Do as you did previously, and save [intros.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/intros.py) and [dostoyevsky_concordance.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/dostoyevsky_2grams.py) into a new directory, and use python to run `dostoyevsky_2grams.py`.
+
 ---
 
-Now, lets break to code down, a section at a time, and have a look at what is going on.
+Now, lets break to code down, a section at a time, and have a look at what is going on. Look at the code first, read the immediate explanation and go through the link to get a hopefully more clear and thorough breakdown of what is going on.
 
 
 ### Importing
@@ -40,9 +48,11 @@ import string
 
 **Read more:** [Importing modules and functions](./modules.md)
 
+---
+
 ### Variables 
 
-After that, we define a few variables that we'll use for our inputdata and the term that we are going to construct the 2-grams around:
+After that, we define a few variables that we'll use for our input data and the term that we are going to construct the 2-grams around:
 
 ```python
 inputfile = "brothers_karamazov.txt"
@@ -71,6 +81,8 @@ In the function we use the `string` -module we imported earlier, to get a ready 
 **Read more:** [Code blocks (or indentation)](./codeblocks.md)
 
 **Read more:** [Functions](./functions.md)
+
+---
 
 ### Lists
 
@@ -104,7 +116,7 @@ We'll use the function that we defined earlier to remove punctuation characters 
 text_combined = strip_punctuation(text_combined)
 ```
 
-Next, being happy with how we've modified the text, we will break it down to a list. Our list will be all the words of the book, in sequence and  changed to lower case. A section of it looks like this: `['have', 'married', 'such', 'a', 'worthless', 'puny', 'weakling', 'as', 'we', 'all', 'called', 'him', 'i', 'won’t', 'attempt', 'to', 'explain', 'i', 'knew', 'a']`
+Next, being happy with how we've modified the text, we will break it down to a list. Our list will be all the words of the book, in sequence and  changed to lower case. A section of it looks like this: `['are', 'shrewd', 'and', 'intelligent', 'enough—but', 'just', 'senselessness', 'and', 'a', 'peculiar', 'national', 'form', 'of', 'it', 'he', 'was', 'married', 'twice', 'and', 'had']`
 
 ```python
 # Create text tokens - that is, a list of all the words in th text
@@ -119,213 +131,61 @@ tokens_with_search_term_preceding = []
 ```
 
 **Read more:** [Lists (and dictionaries)](./lists.md)
-
-
----
-
+**Read more:** [String manipulation](./string_manipulation.md)
 
 ---
 
+### Iterations
 
-
-### Iterations II
-
-Now we can look again the iteration thing, knowing little bit more about the things (list-like-things) we are iterating.
-
-**Iterating lists**
-
-Lists can be iterated in two different ways:
-1) running through all the items in a list
-2) running through list of numbers as long as the list and using those numbers to access elements with corresponding indices in the list
+Next we'll consider each token (word in our long list of words) and add it to our list of results, if it satisfies our condition. We'll use a bit different form of _for-loop_ here than previously. We'll also use list slicing and index to get the 2-grams out from our list of words. 
 
 ```python
-
-my_string = "Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice."
-my_list = my_string.split(" ")
-
-#method 1: Iterate item by item
-
-for x in my_list:
-    if len(x) > 3:
-        print(x)
-        
-Many
-years
-later
-faced
-...
-
-#method 2: Iterate indices
-
-for i in range(0,len(my_list)):  #NOTE function range(a,b) returns numbers from a to b-1
-    if len(my_list[i]) > 3:
-        print(x)
-        
-
-Many
-years
-later
-faced
-...
-
+for i in range(0, len(text_tokens) - 2):
+    tokenpair = text_tokens[i:i + 2]
+    if search_term == tokenpair[0]:
+        tokens_with_search_term_preceding.append(tokenpair[1])
 ```
 
-The main difference between these two is that a list can not be changed while it is being iterated, so we can not remove or add new items to a list with method 1, nor can we change the values in the list.
+The row `tokenpair = text_tokens[i:i + 2]` might warrant further explanation: We use the index `i` that we get from our _for-loop_ to access elements in the list of words for the text. So, text_tokens[1010] would be word number 1010 in that list, etc. List slicing is explained in the section about lists, but because of how it works (the format is: `first_item_to_include:last_item_not_included)` to get a two-word sequence (that is, a 2-gram), we need to give the slicing command the index where we want to start at, and the index that is two greater. So, for example `text_tokens[1010:1012]` does produce the 2-word list `['just', 'senselessness']`.
 
-This restriction is circumvented with method 2, as we are not iterating the list itself, nearly a list of numbers with equal length.
-
-Other reason to use the method 2 would be that it provides a handy way of accessing adjacent items:
-
-```python
-
-for i in range(0, len(my_list)):
-    if my_list[i] == "Colonel":
-        print(my_list[i-1], my_list[i], my_list[i+1])
-
-squad,   Colonel   Aureliano
-
-```
-
-**Iterating dictionaries**
-
-Like said above, items stored in dictionaries are key-value pairs and the values are accessed by their keys (but not the other way round). And also was mentioned before was that keys are not stored in dictionaries in any specific order. This means that if you iterate the same dictionary many times over during your code, the order might be everytime different, or then it might not.
-
-In practice dictionaries are iterated like this:
-
-```python
-my_dict = {"has":34, "is": 59, "a":12}
-
-for key in my_dict:
-    print(key)
-    if my_dict[key] > 50:
-        print("over fifty!")
-        
-a
-is
-over fifty!
-has
-```
-
-
-
+**Read more:** [Lists, and slicing them](./lists.md)
+**Read more:** [Iterations II](./iterations2.md)
 
 ---
 
-### String manipulation
+### Sets and dictionaries
 
-The matter of fact is that strings in Python are little more than lists of characters. Almost all operations that can be done on lists, can be done on strings as well. So certain characters in a string can be accessed by its position, string can be sliced by indices. Also lists and strings utilise the '+' sign in similar way:
+Now we have a list of the words that create a 2-gram pair with 'suddenly', but that list is a mess. It's just an unordered list of words. We'll want to count how many times each word is in that list to get some actual sensible results out. 
+
+First, we'll find all the unique words in that list (unique meaning here that we'll count "him", "it", or any other word only once, even if it occurs multiple times). Next we'll create an empty dictionary to hold our results.
 
 ```python
-my_string_A = "Hopefully this"
-my_string_B = "is helpful"
-
-my_list_A = ["Hopefully", "this"]
-my_list_B = ["is", "helpful"]
-
-print(my_string_A + my_string_B)
-"Hopefully thisis helpful"
-print(my_list_A + my_list_B)
-["Hopefully", "this", "is", "helpful"]
+# find unique terms in our group of terms:
+tokens_set = set(tokens_with_search_term_preceding)
+token_counts_dict = {}
 ```
+
+Next we'll loop over all the unique terms that in the _set_ that we just created, and count the number of times that term appears in our list of terms paired with 'suddenly' in 2-grams. Those terms are held in the list `tokens_with_search_term_preceding`, and counting elements in a list is easy with the `.count()` -function. (In general in programming, you don't remember every command by heart. Instead you google what you want to do: [Like this!](https://www.google.fi/search?&q=how+to+count+items+in+list+in+python&oq=how+to+count+items+in+list+in+python))
+
+Finally, we place the value under a key with the term name in our dictionary of results.
+
+```python
+# count the number of occurrences for each item in set
+for token in tokens_set:
+    occurrences = tokens_with_search_term_preceding.count(token)
+    token_counts_dict[token] = occurrences
+```
+
+**Read more:** [This kind of for-loops were covered last time](../2_basic_concepts/part2.md)
+**Read more:** [Lists, dictionaries and sets](./lists.md)
 
 ---
 
+### Writing our results
 
-
-
----
-
-## Excercises
-
-**Note:** As before, each excercise is independent unless otherwise stated, so start each one in a separate script file, or erase old code from the one you use for doing them. Don't paste them all one after the other!
-
----
-
-### Functions 1
-
-Let's try creating a few functions now. Something really simple as a warmup:
+At the end of our script, we have to save our results somewhere. We'll go with .csv -file, the standard format for spreadsheet -like data. We'll use the function we imported at the start of our script to do this. Have a look inside [intros.py](./intros.py) to see what that function actually does.
 
 ```python
-def multiplier(number_a, number_b):
-   result = number_a * number_b
-   return result
+outputfile = "suddenly_2grams.csv"
+write_dict_to_csvfile(token_counts_dict, outputfile)
 ```
-
-We created a function that thakes two numbers, and returns the result of multiplying them. Let's use that function now, and print the results to see what happened:
-
-```python
-def multiplier(number_a, number_b):
-   result = number_a * number_b
-   return result
-
-a = 2
-b = 6
-result_of_multiplication = multiplier(a, b)
-print(result_of_multiplication)
-```
-
-Create a similar function now, but for adding two numbers together. Use it and print the results out. 
-
-### Functions 2
-
-Let's go back to our adult/minor exercise, and pack some of the code there into a function. Previously, printing the age group was done like this:
-
-```python
-birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
-
-for birth_year in birth_years:
-    age = 1944 - birth_year
-    if age > 17:
-        print("Adult")
-    else:
-        print("Minor")
-
-```
-
-We'll modify that a bit now and instead create a function that we will call inside the loop. Note that this function doesn't really return anything. It just prints the result:
-
-```python
-def print_agegroup(birth_year, historic_year):
-    age = historic_year - birth_year
-    if age > 17:
-        print("Adult")
-    else:
-        print("Minor")
-
-
-birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
-historic_year = 1942
-
-for birth_year in birth_years:
-    print_agegroup(birth_year, historic_year)
-```
-
-Now, modify the function that instead of printing the text "Adult" or "Minor" it will return it as a string. Place that in a variable within the loop and print that variable.
-
-### Functions 3
-
-We've been adding strings together quite a few times previously. As you remember, that went like this: `combined_string = "Digital Humanities" + " is " + "great!".` Let's do that in a function now.
-
-```python
-# We'll define a function that takes a string, and returns
-# that same string with " the cat" added 
-def get_cat_name(name):
-    cat_name = name + " the cat"
-    return cat_name
-
-# and to use that function:
-name1 = "Catty"
-name1_catted = get_cat_name(name1)
-# and print the catname:
-print(name1_catted)
-
-# we can do that inside the print -function too:
-print(get_cat_name("Meow"))
-
-# and we can also loop that over a list:
-names = ["Joe", "Milly", "Andrei", "Anja-Riitta", "Musti"]
-for name in names:
-    print(get_cat_name(name))
-```
-
-Do something similar yourself. create a function that makes names into houseplant names, like this- from "Joe" to "Green Joe the houseplant". Create the function, and try it out over a list.

@@ -16,7 +16,9 @@ print(string_length)
 The function `len()` is given a string as a parameter. That function counts
 length of various objects, in this case that string. The output of the function (23) is then stored in the variable `string_length`. That variable is in turn given to the familiar funtion `print()` as an input, and printed out, like we would expect print to do.
 
-#### Defining your own functions
+---
+
+### Defining your own
 
 As mentioned before, the benefit of writing a program to do some task is that we can automate a repeating task. That holds for parts of those programs too. Say, of we wanted to take the previous birthyear- example and test for the adulthood/minority for a variety of years in time, we would end up writing the same code multiple times. A solution is to write a function of our own: We want to create a single command that is given a birthyear and a historic year as parameters, and that tells us if that person was an adult or not on that specific year. So, let's do that:
 
@@ -60,3 +62,98 @@ is_adult_maija = is_adult(historic_year=year, bithyear=birthyear_maija)
 print(is_adult_maija)
 ```
 ---
+
+## Exercises
+
+**Note:** As before, each exercise is independent unless otherwise stated, so start each one in a separate script file, or erase old code from the one you use for doing them. Don't paste them all one after the other!
+
+---
+
+### Functions 1
+
+Let's try creating a few functions now. Something really simple as a warm up:
+
+```python
+def multiplier(number_a, number_b):
+   result = number_a * number_b
+   return result
+```
+
+We created a function that takes two numbers, and returns the result of multiplying them. Let's use that function now, and print the results to see what happened:
+
+```python
+def multiplier(number_a, number_b):
+   result = number_a * number_b
+   return result
+
+a = 2
+b = 6
+result_of_multiplication = multiplier(a, b)
+print(result_of_multiplication)
+```
+
+Create a similar function now, but for adding two numbers together. Use it and print the results out. 
+
+### Functions 2
+
+Let's go back to our adult/minor exercise, and pack some of the code there into a function. Previously, printing the age group was done like this:
+
+```python
+birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
+
+for birth_year in birth_years:
+    age = 1944 - birth_year
+    if age > 17:
+        print("Adult")
+    else:
+        print("Minor")
+
+```
+
+We'll modify that a bit now and instead create a function that we will call inside the loop. Note that this function doesn't really return anything. It just prints the result:
+
+```python
+def print_agegroup(birth_year, historic_year):
+    age = historic_year - birth_year
+    if age > 17:
+        print("Adult")
+    else:
+        print("Minor")
+
+
+birth_years = [1928, 1924, 1921, 1928, 1926, 1921, 1922, 1926, 1927, 1929]
+historic_year = 1942
+
+for birth_year in birth_years:
+    print_agegroup(birth_year, historic_year)
+```
+
+Now, modify the function that instead of printing the text "Adult" or "Minor" it will return it as a string. Place that in a variable within the loop and print that variable.
+
+### Functions 3
+
+We've been adding strings together quite a few times previously. As you remember, that went like this: `combined_string = "Digital Humanities" + " is " + "great!".` Let's do that in a function now.
+
+```python
+# We'll define a function that takes a string, and returns
+# that same string with " the cat" added 
+def get_cat_name(name):
+    cat_name = name + " the cat"
+    return cat_name
+
+# and to use that function:
+name1 = "Catty"
+name1_catted = get_cat_name(name1)
+# and print the catname:
+print(name1_catted)
+
+# we can do that inside the print -function too:
+print(get_cat_name("Meow"))
+
+# and we can also loop that over a list:
+names = ["Joe", "Milly", "Andrei", "Anja-Riitta", "Musti", "Sigge"]
+for name in names:
+    print(get_cat_name(name))
+```
+
+Do something similar yourself. create a function that makes names into houseplant names, like this- from "Joe" to "Green Joe the houseplant". Create the function, and try it out over a list.

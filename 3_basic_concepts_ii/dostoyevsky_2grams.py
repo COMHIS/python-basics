@@ -43,9 +43,10 @@ for i in range(0, len(text_tokens) - 2):
 tokens_set = set(tokens_with_search_term_preceding)
 token_counts_dict = {}
 
+# count the number of occurences for each item in set
 for token in tokens_set:
-    occurences = tokens_with_search_term_preceding.count(token)
-    token_counts_dict[token] = occurences
+    occurrences = tokens_with_search_term_preceding.count(token)
+    token_counts_dict[token] = occurrences
 
 outputfile = "suddenly_2grams.csv"
 write_dict_to_csvfile(token_counts_dict, outputfile)

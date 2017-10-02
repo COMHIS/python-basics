@@ -1,4 +1,4 @@
-### Indentation / Blocks of code
+## Indentation / Blocks of code
 
 With the conditional statements (if & else) and iterations (for -loops) we encountered indented code. An example from last part would looked like this:
 
