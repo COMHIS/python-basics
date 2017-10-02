@@ -217,5 +217,4 @@ It is common for example APIs or syntactic or morphological parser to return the
           "word": "Kulkiivat"
 ```
 
-In these structures lists and dictionari---
-es typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
+In these structures lists and dictionaries typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
