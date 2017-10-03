@@ -86,5 +86,78 @@ B) LONDON. Michaelmas Term lately over, and the Lord Chancellor sitting in Linco
 
 
 
+---
 
+## Iteration
+
+Remember, iteration means we will go items in some kind of list or sequence, one at a time. We will employ lists and variables here as well.
+
+### Iteration 1
+
+Let's iterate over a list and print the results out.
+
+```python
+list_of_animals = ["duck", "dog", "cat", "human"]
+for animal in list_of_animals:
+    print(animal)
+
+```
+
+Now, create a new script file and create a list like in our previous example. Make it a list of 5 names, for example. Iterate over that list and print each item in turn, just like we did with the list of animals.
+
+### Iteration 2
+
+Next we'll try actually doing something with the values in our loop. Our dummy-data of 18th century publication years has some errors in it, and we'd like to find them. Modify the code inside the for-loop so that all years that are outside the 18th century are printed out.
+
+```python
+publication_years = [1750, 1761, 1775, 1776, 1701, 1702, 1706, 1906, 1765, 1752, 1991, 751, 1789, 1777, 1711]
+for year in publication_years:
+    if year < 2000:
+        print(year)
+    if year > 2000:
+        print(year)
+```
+
+You should print out the years 1906, 1991 and 751.
+
+### Iteration 3
+
+Let's imagine we cleaned up that list of years. We'll want to find the latest publication year in our dataset now. For this we'll set up a varibale that will hold that value, and overwrite it each time we find higher value in our list. We start with highest_year set to 0, as any year will be higher than that. Use the line `highest_year = year` to place the value in variable `year` in the variable `highest_year`. Each time we find a higher year, we will overwrite the previous best result kept there.
+
+Finally, add a new line to print the highest_year after the loop is finished.
+
+```python
+publication_years = [1750, 1761, 1775, 1776, 1701, 1702, 1706, 1706, 1765, 1752, 1791, 1751, 1789, 1777, 1711]
+
+highest_year = 0
+
+for year in publication_years:
+    if year > highest_year:
+        # set highest_year to year on the following line!
+        RIGHT_HERE
+
+```
+
+### Iteration 4
+
+Something a bit more challenging now. Let's find the year closests to 1755 in our data. We'll use the function `abs()`, which will turn any integer into a positive integer - so -5 becomes 5, -1 becomes 1, 3 as, it already is positive stays 3, etc. 
+
+Again, modify the code so it will work.
+
+```python
+publication_years = [1750, 1761, 1775, 1776, 1701, 1702, 1706, 1706, 1765, 1752, 1791, 1751, 1789, 1777, 1711]
+
+closest_year = 0
+
+for year in publication_years:
+    # find the difference between 1755 and the year we are iterating:
+    difference = abs(1755 - year)
+    # then find the previous best result:
+    closest_difference_so_far = abs(1755 - closest_year)
+    if difference < smallest_difference:
+        # assign year to closest_year here
+        RIGHTHERE
+        
+print(closest_year)
+```
 
