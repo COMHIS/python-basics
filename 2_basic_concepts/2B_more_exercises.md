@@ -215,7 +215,7 @@ for year in publication_years:
     difference = abs(1755 - year)
     # then find the previous best result:
     closest_difference_so_far = abs(1755 - closest_year)
-    if difference < smallest_difference:
+    if difference < closest_difference_so_far:
         # assign year to closest_year here
         RIGHTHERE
         
