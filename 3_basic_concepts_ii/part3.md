@@ -138,6 +138,7 @@ tokens_with_search_term_preceding = []
 ```
 
 **Read more:** [Lists (and dictionaries)](./lists.md)
+
 **Read more:** [String manipulation](./string_manipulation.md)
 
 ---
@@ -156,6 +157,7 @@ for i in range(0, len(text_tokens) - 2):
 The row `tokenpair = text_tokens[i:i + 2]` might warrant further explanation: We use the index `i` that we get from our _for-loop_ to access elements in the list of words for the text. So, text_tokens[1010] would be word number 1010 in that list, etc. List slicing is explained in the section about lists, but because of how it works (the format is: `first_item_to_include:last_item_not_included)` to get a two-word sequence (that is, a 2-gram), we need to give the slicing command the index where we want to start at, and the index that is two greater. So, for example `text_tokens[1010:1012]` does produce the 2-word list `['just', 'senselessness']`.
 
 **Read more:** [Lists, and slicing them](./lists.md)
+
 **Read more:** [Iterations II](./iterations2.md)
 
 ---
@@ -184,6 +186,7 @@ for token in tokens_set:
 ```
 
 **Read more:** [This kind of for-loops were covered last time](../2_basic_concepts/part2.md)
+
 **Read more:** [Lists, dictionaries and sets](./lists.md)
 
 ---
