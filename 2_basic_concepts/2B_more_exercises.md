@@ -65,7 +65,7 @@ else:
     
 The condition part can be written in many ways. Probably the most common one is 
 
-### Exercise Program flow 1:
+### Exercise Program flow 1: normal flow
 
 Copy paste the following script in your text editor and save it as 2B_flow1.py.
 
@@ -92,7 +92,7 @@ A) we see that no characters have been deleted, so there has been no _n_ letters
 B) In here the _N_'s have been dropped, so the removing _n_'s has to come after lowercasing. The A's are again lowercase, so lowercasing must precede the addition of A's.
 
 
-### Exercise Program flow 2:
+### Exercise Program flow 2: functions
 Again, copy paste the following script in your text editor and save it as 2B_flow2.py.
 
 ```python
@@ -117,15 +117,33 @@ A)                 ,...IIIIIIIaaaaaaaaabbcccccdddeeeeeeeeeeeghhhhhlllllllllllllm
 B) LONDON. Michaelmas Term lately over, and the Lord Chancellor sitting in Lincoln’s Inn Hall. Implacable November weather.
 
 **Solution**
-The output has 
+A) The output has uppercase I's leading the other characters, which means that changing i's to I's must precede the alphabetical ordering. Other characters are ordered in one sequence, which means that overall lowercasing must precede alphabetical ordering as well.
+
+B) This is a trick question of course. The print() function can follow directly the first definition of _text_ variable.
 
 
-### Exercise Program flow 3:
+### Exercise Program flow 3: conditions
 
+Again, copy paste the following script in your text editor and save it as 2B_flow3.py.
 
+```python
 
+text = "LONDON. Michaelmas Term lately over, and the Lord Chancellor sitting in Lincoln’s Inn Hall. Implacable November weather."
 
-## Control
+text = text.lower()
+
+if text.islower():
+    text = text.replace("LONDON. ", "")
+else:
+    text = text+" FIN."
+    
+
+print(text)
+```
+
+Re-order the code so that the end result is:
+
+london. michaelmas term lately over, and the lord chancellor sitting in lincoln’s inn hall. implacable november weather. fin.
 
 
 
