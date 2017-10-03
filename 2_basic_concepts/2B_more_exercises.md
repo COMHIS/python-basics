@@ -54,7 +54,36 @@ continues forward. The function range(0,5) defines the sequence of values _i_ is
 Another major exception to the processing order are functions. Functions are actually bits code, that are written 
 somewhere else but read here! We'll get to functions in more detail later on.
 
+### Exercise Program flow 1:
+
+Copy paste the following script in your text editor and save it as 2B_flow1.py.
+
+```python
+def alphabet_order(A):
+    return "".join(sorted(A))
+
+text = "LONDON. Michaelmas Term lately over, and the Lord Chancellor sitting in Lincoln’s Inn Hall. Implacable November weather."
+
+text = alphabet_order(text)
+
+text = text.lower()
+
+text = text.replace("i", "I")
+
+print(text)
+```
+Re-order the commands so that the result comes out like:
+
+A)                 ,...IIIIIIIaaaaaaaaabbcccccdddeeeeeeeeeeeghhhhhlllllllllllllmmmmmnnnnnnnnnnnoooooooprrrrrrsssttttttvvwy’
+B) LONDON. Michaelmas Term lately over, and the Lord Chancellor sitting in Lincoln’s Inn Hall. Implacable November weather.
+
+### Exercise Program flow 2:
+
+
+
+
 ## Control
+
 
 
 
