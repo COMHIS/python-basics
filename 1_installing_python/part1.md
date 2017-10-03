@@ -42,6 +42,7 @@ Make sure that you now have Python 3 installed by following the instructions [he
   * We can see a list of the contents of the directory we currently are in terminal by typing `dir` (in Windows) or `ls` (in Linux or MacOS)
   * To move into a subdirectory of the current directory type `cd [name of the directory]` eg. `cd dhprogramming1` 
   * To move one step back type `cd ..`
+  * More info on [cd]("https://en.wikipedia.org/wiki/Cd_(command)"), [ls]("https://en.wikipedia.org/wiki/Ls"), [dir]("https://en.wikipedia.org/wiki/Dir_(command)") and [mkdir]("https://en.wikipedia.org/wiki/Mkdir")
 
 ---
 
