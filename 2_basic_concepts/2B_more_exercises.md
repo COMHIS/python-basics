@@ -201,23 +201,24 @@ for year in publication_years:
 
 ### Iteration 4
 
-Something a bit more challenging now. Let's find the year closests to 1755 in our data. We'll use the function `abs()`, which will turn any integer into a positive integer - so -5 becomes 5, -1 becomes 1, 3 as, it already is positive stays 3, etc. 
+Something a bit more challenging now. Let's find the year closests to 1755 in our data. We'll use the function `abs()`, which will turn any integer into a positive integer - so -5 becomes 5, -1 becomes 1, 3 as it already is positive stays 3, etc. 
 
-Again, modify the code so it will work.
+The code below already almost works. But the problem is that it finds the furthest, not the closest year! Try to fix it so that it does what it's supposed to do.
+
+Try going through the code line by line, and figuring out what happens. What is the number in each variable, and how do they change?
 
 ```python
 publication_years = [1750, 1761, 1775, 1776, 1701, 1702, 1706, 1706, 1765, 1752, 1791, 1751, 1789, 1777, 1711]
 
-closest_year = 0
+closest_year = publication_years[0]
 
 for year in publication_years:
     # find the difference between 1755 and the year we are iterating:
     difference = abs(1755 - year)
     # then find the previous best result:
     closest_difference_so_far = abs(1755 - closest_year)
-    if difference < smallest_difference:
-        # assign year to closest_year here
-        RIGHTHERE
+    if difference > closest_difference_so_far:
+        closest_year = year
         
 print(closest_year)
 ```
