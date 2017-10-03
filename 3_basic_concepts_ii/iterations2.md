@@ -77,3 +77,23 @@ has
 ```
 
 ---
+
+## Exercises
+
+### Iteration 1
+
+For some reason we want to generate 10 different random number, within the range 0-9. A loop is a handy thing for doing just that. Change the following code so that it will print what we want.
+
+```python
+import random
+
+numbers_to_generate = 3
+for i in range(0, numbers_to_generate):
+    random_number = random.randint(0, 9)
+    print(random_number)
+
+```
+
+### Iteration 2
+
+You should be such a seasoned iterator by now, that some independent work is not out of the question. Save the instructions in this paragraph (Iterations 2 -exercise) as a string and split that into a list. Then, iterate over that list and print each word if it is over 3 characters long. Remember, the len() -function gives you the length of a list or string.

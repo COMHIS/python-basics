@@ -4,7 +4,13 @@ This part will familiarize you with the second group of basic concepts. After un
 
 ## Important reminder
 
-The basic logic of programming applies again. Input-> blahblah-> output
+The basic logic of programming applies again. In the following script we'll go through the following steps:
+
+1. Read "raw" input data
+2. Adapt that data to Python data structures
+3. Iterate through it to get results
+4. Keep those results in a Python data structure
+5. Save the output in a more universal format readable by other programs
 
 ---
 
@@ -29,10 +35,9 @@ First, have a look at the code as it is, to get a general overview of it. No nee
 
 [dostoyevsky_2grams.py](./dostoyevsky_2grams.py)
 
-To get a feel of where are we heading try running the code also. We're applying the methods to another source text now, namely "The Brothers Karamazov". Do as you did previously, and save [intros.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/intros.py) and [dostoyevsky_concordance.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/dostoyevsky_2grams.py) into a new directory, and use python to run `dostoyevsky_2grams.py`.
+To get a feel of where are we heading try running the code also. We're applying the methods to another source text now, namely ["The Brothers Karamazov"](./brothers_karamazov.txt). Do as you did previously, and save [intros.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/intros.py), [dostoyevsky_concordance.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/3_basic_concepts_ii/dostoyevsky_2grams.py) and the source text into a new directory, and use python to run `dostoyevsky_2grams.py`.
 
-
-Now, lets break to code down, a section at a time, and have a look at what is going on. Look at the code first, read the immediate explanation and go through the link to get a hopefully more clear and thorough breakdown of what is going on. You might want to keep the [dostoyevsky_2grams.py](./dostoyevsky_2grams.py) open in another tab while you read through the sections below, to be better able to follow the program flow.
+Now, lets break to code down, a section at a time, and have a look at what is going on. Look at the code first, read the immediate explanation and go through the link to get a hopefully more clear and thorough breakdown of what is going on. The sections behind the links have an explanation of those concepts first, followed by exercises. You might want to keep the [dostoyevsky_2grams.py](./dostoyevsky_2grams.py) open in another tab while you read through the sections below, to be better able to follow the program flow.
 
 ---
 

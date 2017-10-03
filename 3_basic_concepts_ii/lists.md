@@ -1,4 +1,4 @@
-### Lists and dictionaries
+## Lists and dictionaries
 
 The reason why programming is such a useful thing to learn, is that you are very soon able to automatise repetitive tasks. The amount of time you spend writing the code does not depend on the size of your dataset, and for most simpler tasks the computer can run through thousands of rows of data in seconds.
 
@@ -6,7 +6,7 @@ In order to get acquainted with handling datasets and their manipulation, we fir
 
 Basically their idea is the same: you can refer to whole bunch of variables with just one name! Their differences comes from how you operate them and access the variables put into them.
 
-#### List
+### List
 
 List is simply just a batch, row, line, set or _list_ of things. Items in a list have order, and can be accessed by index based on that order, but that's about it.
 
@@ -58,7 +58,13 @@ A common problem for any Excel-humanist is that the original data might contain 
 
 Lists are mutable which means that they can be changed on the go. You can add more elements to a list or remove them. You can count how many times a specific element occurs in the list or sort a list based on whichever criteria you see fit. And so on.
 
-#### Dictionaries
+Adding elements to a list is done by their `.append()` function. So, to add `"concepts"` -string variable to our `miscellania` -list, we'd do this:
+
+```python
+miscellania.append("concepts")
+```
+
+### Dictionaries
 
 Dictionaries can be thought like a special type of list, where items in the list are not accessed by indices but by specific _keys_. Key is a name given to a specific value.
 
@@ -105,7 +111,7 @@ for word in text:                      #while iterating the text as a list of wo
         word_frequencies[word] += 1    #we just add one to the existing value
 ```
 
-#### Sets
+### Sets
 
 A dictionary in Python is a lot like a dictionary in real life: You have one key (entry in a dictionary, "The Enlightenment", for example), and a value corresponding to that key (the text that tells what the Enlightenment was all about). Keys are always unique: You can't have a dictionary with two identical keys, and if you try to add a new entry with the same key you end up overwriting the old one.
 
@@ -130,8 +136,7 @@ set_of_words
 # {'key', 'free', 'ambition', 'the', 'catacombs', 'mango'}
 ```
 
-
-**JSON and Complicated Data Structures**
+### JSON and Complicated Data Structures
 
 It is common for example APIs or syntactic or morphological parser to return the data they have provided for you in so-called JSON-format. JSON data structures are practically identical to Python data strcutures and the notation is the same. So if you, for example, use the KORP corpus interfaces API, it will return something like this:
 
@@ -218,3 +223,53 @@ It is common for example APIs or syntactic or morphological parser to return the
 ```
 
 In these structures lists and dictionaries typically alternate, so that it can take a while until you make sense of what's what. After that the analysis is usually quite straightforward.
+
+## Exercises
+
+These exercises expect you to add to to previous code, unless otherwise noted. So, after finishing **Lists 1**, keep the code and add the following exercise on lines below that in the same script, etc.
+
+### Lists 1
+
+Create a list of years (integers) with some values in it. Like this:
+
+```python
+years = [2000, 2015, 1995, 1985, 1765]
+```
+
+Make that list have 10 different years in total and print it.
+
+### Lists 2
+
+Now get the third element of that year-list, place it in a varible and print that variable. Accessing elements in a list was done by their index: `mylist[index_to_get]`.
+
+### Lists 3
+
+Do the same, but get years in indices 1-5. This is called slicing, and done like this: mylist[slice_start_index:first_index_not_included_in_slice]
+
+### Lists 4
+
+Seems that we forgot one more year: 2017. Add that to your list of years (using the `.append()` -function), and print the list to make sure everything worked ok.
+
+### Dictionaries 1
+
+Start a new script file. We'll start with a dictionary with people's names as keys and their birith years as the values stored in the dictionary:
+
+```python
+ls_register = {'Jasmiina': 1921, 'Henrietta': 1923, 'Justiina': 1933, 'Anja': 1931, 'Aukustiina': 1911, 'Vilma': 1925, 'Josefiina': 1926, 'Marjatta': 1921}
+```
+
+Let's try accessing the values in the dictionary. use the `.get()` function to retrive Anja's age, and print it. The formula for that is: `name_of_my_dictionary.get(key)`, so in this case: `ls_register.get('Anja')`
+
+### Dictionaries 2
+
+Let's try iterating our dictionary now. We can get all the keys in it by .keys() -function. First, just to see what they are, and to make sure everything is working, try printing them like this: `print(ls_register.keys())`
+
+To access the keys one by one, we would iterate trough them in a loop like this:
+
+```python
+for key in ls_register.keys():
+    # and print them for good measure
+    print(key)
+```
+
+Now in addition to printing the key, also inside the loop print the value stored in the dictionary with each key. You can do that by giving `key` (the variable name we are iterating in the loop) as parameter to the `.get()` -function.

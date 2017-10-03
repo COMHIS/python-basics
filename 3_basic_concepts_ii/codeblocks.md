@@ -39,3 +39,38 @@ for birth_year in birth_years:
 Above, the code block holding the contents of the for-loop also has two smaller 1-line blocks inside it: the `print("Adult")` and the `print("Minor")` blocks are contained within the block for the loop.
 
 Think of _code blocks_ as small semi-independent sections of code that have their own small task to perform.  
+
+###  Exercises
+
+There's something wrong in the following code blocks. Modify them to make them work and run them.
+
+#### Code blocks 1
+
+```python
+animal = "dog"
+
+if animal == "cat":
+print("Meow!")
+else
+    print("Woof!")
+```
+
+#### Code blocks 2
+
+And now with a block within a block:
+
+```python
+import random
+
+sentence = "This seems fairly random. Also, why can't I see all the letters?"
+strange_sentence = ""
+
+for character in sentence
+display_char = random.randint(0, 1)
+if display_char == 0:
+strange_sentence = strange_sentence + " "
+else:
+    strange_sentence = strange_sentence + character
+
+print(strange_sentence)
+```

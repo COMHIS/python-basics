@@ -30,3 +30,31 @@ with open('some.csv', newline='') as csvfile:
         print(row)
 ...
 ```
+
+---
+
+### Exercises
+
+#### Importing 1
+
+Modify the below code to make it work. The steps are:
+
+1. Fix the first line in below code to import the [random](https://docs.python.org/3/library/random.html) -module.
+2. Add a line at the end to print the value in the variable called `this_number_should_be_random`.
+3. Save the fixed script and run it a few times. Seems pretty random, right? Have a look at the function we used in the script, and don't worry if the 
+
+```python 
+import CHANGETHIS
+this_number_should_be_random = random.randint(1, 100)
+```
+
+---
+
+#### Importing 2
+
+Try importing something on your own now:
+
+1. Import the [datetime](https://docs.python.org/3/library/datetime.html) -module (see above)
+2. Create a new variable, and save today's date in there
+  * You can get that by `datetime.date.today()`
+3. print that variable. You should get something like this out: `2017-10-03`
