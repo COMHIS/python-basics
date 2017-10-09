@@ -54,7 +54,7 @@ You'll want to first split the string into a list, then find all unique words in
 ### Additional tips:
 
 * How do you create the dictionary with empty lists? Do this by iterating through the values in the _set_, and add each of those values to the dictionary as a key, with an empty list (`[]`) as its value pair. See [this bit in lesson 3](../3_basic_concepts_ii/lists.md) for further details.
-* Remember how to access list items by index? This is just that all the way.
+* Remember how to access list items by index? [This is just that all the way]()https://github.com/COMHIS/python-basics/blob/part3/3_basic_concepts_ii/iterations2.md.
 * Iterate with the `for i in range(start, end)` -type loop
 * The first half of the bigram can be accessed with `wordlist[i]`
 * The second half of the bigram can be accessed with `wordlist[i + 1]`
