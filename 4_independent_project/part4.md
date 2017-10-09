@@ -34,7 +34,7 @@ Start by creating a new project directory and inside that a new python script fi
 We need some way to read the textfile that we are about to use as our source into Python. Like previously, we'll import those from a ready made module, and use the imported functions to read the source file.
 
 * Copy [textfile_io.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/4_independent_project/textfile_io.py) to your project directory.
-* Import the function for reading text files to strings.
+* _[Import the function](../3_basic_concepts_ii/importing.md)_ for reading text files to strings.
 * Use the imported function to save the text into a string variable.
 
 ## Creating bigrams
@@ -46,6 +46,7 @@ You'll want to first split the string into a list, then find all unique words in
 * Make a _list_ of words out of your string with the source text.
 * Create a _[set](../3_basic_concepts_ii/lists.md)_ from the list
 * Create a _[dictionary](../3_basic_concepts_ii/lists.md)_ with the values in the set as keys, and empty list as the value stored at each key.
+  * __Tip:__ You can do this by iterating through the values in the set, and adding each of those values to the dictionary as a key, with an empty list `[]` as its value pair.
 * Iterate through all the words in the big list of words by index
   * Get the word at the index (first half of bigram)
   * Get the word at the next index (second half of bigram)
