@@ -61,7 +61,11 @@ You'll want to first split the string into a list, then find all unique words in
 
 ## Done!
 
-We're ready to go to the next part now. But if you want, you can create statistics for the bigrams to get a better overview of our material.
+We're ready to go to [the next part](../5_markov_chains/part5.md) now.
+
+### No need to go into the following!
+
+But if you want, you can create statistics for the bigrams to get a better overview of our material.
 
 Iterate through each key in the dictionary and count the words in the list stored at each key. Create a new dictionary to store your results at, and see how it looks.
 
