@@ -43,9 +43,9 @@ Chop the text string into a list of single words, and then find all the bigram p
 
 You'll want to first split the string into a list, then find all unique words in it by creating a set from it. Then you are ready to create your dictionary: The unique words are the keys, and each key has a list of words following it as its value. You need to first create a dictionary with the keys pointing to empty list, to have something that you can add to later. Then you will need to iterate through each word in the list of words and add the word following that to the corresponding list in your dictionary.
 
-* Make a list of words out of your string with the source text.
-* Create a set from the list
-* Create a dictionary with the values in the set as keys, and empty list as the value stored at each key.
+* Make a _list_ of words out of your string with the source text.
+* Create a _[set](../3_basic_concepts_ii/lists.md)_ from the list
+* Create a _[dictionary](../3_basic_concepts_ii/lists.md)_ with the values in the set as keys, and empty list as the value stored at each key.
 * Iterate through all the words in the big list of words by index
   * Get the word at the index (first half of bigram)
   * Get the word at the next index (second half of bigram)
