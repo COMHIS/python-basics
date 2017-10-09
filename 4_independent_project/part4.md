@@ -6,9 +6,9 @@ Internet is full of examples of markov-chains used to generate text. A good exam
 
 During part I we'll create the data that we build the Markov chains from, and in part II we will create the actual chains.
 
-To be able to create a the Markov chains, we will need a database that has every single word occurring in the text, paired with the words immediately following it. So, for example, take the word "Myshkin". We'll want to know how probably it is followed by "was", "did", "suddenly", etc. and so on for all the possible word combinations. In other words, we'll be creating a statistical overview of all the bigrams ([what were n-grams again?](http://text-analytics101.rxnlp.com/2014/11/what-are-n-grams.html)) in the text.
+To be able to create the Markov-chains, we will need a database that has every single word occurring in the text, paired with the words immediately following it. So, for example, take the word "Muishkin" (name of a character in the text). We'll want to know how probably it is followed by "was", "did", "suddenly", etc. and so on for all the possible word combinations. In other words, we'll be creating a statistical overview of all the bigrams ([what were n-grams again?](http://text-analytics101.rxnlp.com/2014/11/what-are-n-grams.html)) in the text.
 
-There will be no instructions on code syntax this time. Refer back to previous lessons for that. You'll find it easier to do the below in parts, and trying to print out the variables to make sure you are on the right track. You might also want to try out your code in the interactive python shell.
+There will be no instructions on code syntax this time. Refer back to previous lessons for that. You'll find it easier to do the below in parts, and trying to print out the variables to make sure you are on the right track. You might also want to try out your code in the interactive Python shell.
 
 ## Goals for part I
 
@@ -36,7 +36,7 @@ We need some way to read the textfile that we are about to use as our source int
 * Import the function for reading text files to strings.
 * Use the imported function to save the text into a string variable.
 
-## Creating the bigrams
+## Creating bigrams
 
 Chop the text string into a list of single words, and then find all the bigram pairs for that word. Save this all in a big dictionary.
 
@@ -50,7 +50,7 @@ You'll want to first split the string into a list, then find all unique words in
   * Get the word at the next index (second half of bigram)
   * Add that second half oh the bigram to a list at your dictionary at a key corresponding with the first half
 
-**Additional tips:**
+### Additional tips:
 
 * Remember how to access list items by index? This is just that all the way.
 * Iterate with the `for i in range(start, end)` -type loop
