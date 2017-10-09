@@ -2,7 +2,7 @@
 
 This and the next lesson give general instructions for steps to complete a small coding project on your own. The end result of this project will be a Markov-chain based text generator. The basic idea is to take a source text (for example the Idiot by Dostoyevsky), create a "database" based on that text, and use that data to generate random sequences of text that will be original, but in the style of our source.
 
-Internet is full of examples of markov-chains used to generate text. A good example, built around tweets by Donald Trump laying out the logic behind the construction of these chains can be found [here](https://filiph.github.io/markov/).
+Internet is full of examples of Markov-chains used to generate text. A good example, built around tweets by Donald Trump laying out the logic behind the construction of these chains can be found [here](https://filiph.github.io/markov/).
 
 During part I we'll create the data that we build the Markov chains from, and in part II we will create the actual chains.
 
@@ -18,7 +18,7 @@ In this part we'll:
 * Break the text down to bigrams.
 * Create a statistical overview of said bigrams.
 
-After finishing the above steps, we are ready to create the markov-chain text generator in part II.
+After finishing the above steps, we are ready to create the Markov-chain text generator in part II.
 
 ## Setting up
 
@@ -40,7 +40,7 @@ We need some way to read the textfile that we are about to use as our source int
 
 Chop the text string into a list of single words, and then find all the bigram pairs for that word. Save this all in a big dictionary.
 
-You'll want to first split the string into a list, then find all unique words in it by creating a set from it. Then you are ready to create your dictionary: The unique words are the keys, and each key has a list of words following it as it's value. You need to first create a dictionary with the keys pointing to empty list, to have something that you can add to later. Then you will need to iterate through each word in the list of words and add the word following that to the corresponding list in your dictionary.
+You'll want to first split the string into a list, then find all unique words in it by creating a set from it. Then you are ready to create your dictionary: The unique words are the keys, and each key has a list of words following it as its value. You need to first create a dictionary with the keys pointing to empty list, to have something that you can add to later. Then you will need to iterate through each word in the list of words and add the word following that to the corresponding list in your dictionary.
 
 * Make a list of words out of your string with the source text.
 * Create a set from the list
@@ -48,7 +48,7 @@ You'll want to first split the string into a list, then find all unique words in
 * Iterate through all the words in the big list of words by index
   * Get the word at the index (first half of bigram)
   * Get the word at the next index (second half of bigram)
-  * Add that second half oh the bigram to a list at your dictionary at a key corresponding with the first half
+  * Add that second half of the bigram to a list at your dictionary at a key corresponding with the first half
 
 ### Additional tips:
 
