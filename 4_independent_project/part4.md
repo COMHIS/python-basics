@@ -27,6 +27,7 @@ Start by creating a new project directory and inside that a new python script fi
 * Create a new directory for the project.
 * Create a new script file in that directory.
 * Copy a source text file (.txt) into that directory.
+* Clean the source text file of the header and footer -parts added by Project Gutenberg.
 
 ## Read source text
 
@@ -62,3 +63,9 @@ You'll want to first split the string into a list, then find all unique words in
 We're ready to go to the next part now. But if you want, you can create statistics for the bigrams to get a better overview of our material.
 
 Iterate through each key in the dictionary and count the words in the list stored at each key. Create a new dictionary to store your results at, and see how it looks.
+
+You should end up with something like this:
+
+```python
+>>> all_counts['Alexey']
+{'counts': {'Karamazov,”': 1, 'Fyodorovitch....': 1, 'Fyodorovitch,': 54, 'Fyodorovitch,”': 7, 'Ivanitch.”': 1, 'Karamazov—there’s': 1, 'Fyodorovitch.': 11, 'would': 1, 'Fyodorovitch!”': 1, 'Fyodorovitch—to': 1, 'Fyodorovitch?': 2, 'Fyodorovitch—be': 1, 'Fyodorovitch.”': 5, 'Fyodorovitch!': 5, 'more': 1, 'Fyodorovitch;': 3, 'Ivanitch': 1, 'I': 1, 'Fyodorovitch’s': 2, 'Fyodorovitch': 11, 'Karamazov': 2, 'Fyodorovitch?”': 3, 'Karamazov,': 1, 'was': 1}}```
