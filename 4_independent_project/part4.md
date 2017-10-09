@@ -45,10 +45,7 @@ You'll want to first split the string into a list, then find all unique words in
 
 * Make a _list_ of words out of your string with the source text.
 * Create a _[set](../3_basic_concepts_ii/lists.md)_ from the list
-* Create a _[dictionary](../3_basic_concepts_ii/lists.md)_ with the values in the set as keys, and empty list as the value     stored at each key.
-
-  * You can do this by iterating through the values in the set, and adding each of those values to the dictionary as a key, with an empty list as its value pair.
-
+* Create a _[dictionary](../3_basic_concepts_ii/lists.md)_ with the values in the set as keys, and empty list as the value     stored at each key. (See tips below.)
 * Iterate through all the words in the big list of words by index
   * Get the word at the index (first half of bigram)
   * Get the word at the next index (second half of bigram)
@@ -56,6 +53,7 @@ You'll want to first split the string into a list, then find all unique words in
 
 ### Additional tips:
 
+* How do you create the dictionary with empty lists? Do this by iterating through the values in the _set_, and add each of those values to the dictionary as a key, with an empty list (`[]`) as its value pair. See [this bit in lesson 3](../3_basic_concepts_ii/lists.md) for further details.
 * Remember how to access list items by index? This is just that all the way.
 * Iterate with the `for i in range(start, end)` -type loop
 * The first half of the bigram can be accessed with `wordlist[i]`
