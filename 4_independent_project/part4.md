@@ -46,6 +46,7 @@ You'll want to first split the string into a list, then find all unique words in
 * Make a _list_ of words out of your string with the source text.
 * Create a _[set](../3_basic_concepts_ii/lists.md)_ from the list
 * Create a _[dictionary](../3_basic_concepts_ii/lists.md)_ with the values in the set as keys, and empty list as the value     stored at each key.
+
   * You can do this by iterating through the values in the set, and adding each of those values to the dictionary as a key, with an empty list as its value pair.
 
 * Iterate through all the words in the big list of words by index
