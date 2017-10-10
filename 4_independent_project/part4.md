@@ -27,14 +27,14 @@ Start by creating a new project directory and inside that a new python script fi
 * Create a new directory for the project.
 * Create a new script file in that directory.
 * Copy a source text file (.txt) into that directory.
-* Clean the source text file of the header and footer -parts added by Project Gutenberg.
+* _Optionally_ clean the source text file of the header and footer -parts added by Project Gutenberg. No need to do this in Python, just edit the file and cut out the Project Gutenberg -specific parts.
 
 ## Read source text
 
 We need some way to read the textfile that we are about to use as our source into Python. Like previously, we'll import those from a ready made module, and use the imported functions to read the source file.
 
 * Copy [textfile_io.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/4_independent_project/textfile_io.py) to your project directory.
-* _[Import the function](../3_basic_concepts_ii/importing.md)_ for reading text files to strings.
+* [Import the function](../3_basic_concepts_ii/importing.md) for reading text files to strings. Have a look at the function names in textfile_io.py, the name should make it obvious which one to use. 
 * Use the imported function to save the text into a string variable.
 
 ## Creating bigrams
