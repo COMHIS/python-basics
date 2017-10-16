@@ -7,3 +7,4 @@ A short introduction to Python for Digital Humanities students and other DH-curi
 * [Part 2 - Basic Concepts](./2_basic_concepts/part2.md)
   * [Additional exercises](./2_basic_concepts/2B_more_exercises.md)
 * [Part 3 - Basic Concepts II](./3_basic_concepts_ii/part3.md)
+* [Part 4 - Independent Project](./4_independent_project/part4.md)
