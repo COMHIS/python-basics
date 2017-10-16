@@ -79,11 +79,12 @@ Place that random number in a variable, and retrieve the word in the list of big
 * Choose a random word from the list of bigram pairs.
 
 Still within the loop, add that randomly chosen word to the end of our results list.
+
 **Tip:** Remember the `.append()` -method here.
 
 ### Finishing touches
 
-We should be almost done now. The results list should have randomly chosen words in sequence, with a semisensible structure. Join that list into a string, and write it into an output file. After that you're done! After a succesful run try alterin the length parameter.
+We should be almost done now. The results list should have randomly chosen words in sequence, with a semisensible structure. Join that list into a string, and write it into an output file. After that you're done! After a succesful run try altering the length parameter.
 
 Combining the list to a single string is easy. Just [google](https://www.google.fi/search?q=python+combine+list+into+string) it. This too should be stored in a variable. In general you want to be storing things in variables all the time.
 
