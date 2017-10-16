@@ -91,6 +91,8 @@ The `textfile_io.py` -module has a function (a bit confusingly by the name `writ
 
 **You're done!** Inspect the output file, and decide if it makes sense or not.
 
+---
+
 ### Bonus assignment
 
 **Only do these if you feel you need an extra challenge!**
