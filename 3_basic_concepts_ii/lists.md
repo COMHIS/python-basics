@@ -28,6 +28,9 @@ To access any element of the list, you refer to it by its location in the list, 
 ```python
 first_word = sentence_as_list[0]
 ```
+
+A list can be accessed from the end also: The last element of the list is -1 (eg. `last_word = sentence_as_list[-1]`), the second to last is -2, etc.
+
 In addition to accessing a single element of a list, it is also possible to get a number of different subsets or slices of a list:
 
 ```python
@@ -88,8 +91,14 @@ my_dict.update({"start_date":"1.9.2017"})
 print(my_dict)
 my_dict = {"name":"Introduction to Digital Humanities", "points": 5, "year":2017, "semester":Autumn, "start_date":"1.9.2017"}
 ```
-A crucial difference compared to lists is that dictionaries are not in any specific order. We will come back to this later when telling how dictionaries are iterated over.
 
+You can get a listing of all the keys in the dictionary by the `.keys()` -function, like so:
+
+```python
+my_dict.keys()
+```
+
+A crucial difference compared to lists is that dictionaries are not in any specific order. We will come back to this later when telling how dictionaries are iterated over.
 
 A very common computational / corpus linguistic task is to compile a word frequency list out of large text. It is easy to do using a dictionary:
 
