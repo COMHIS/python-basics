@@ -1,6 +1,6 @@
 # Part 1 - Installing Python
 
-As a first step, we will install a programming language, called Python, on your personal laptop [(students at University of Helsinki: What if I don’t have a laptop?)](./using_cubbli.md). There are all kinds of things to learn about programming languages and the concepts utilized in them, but we will skip those for now, and just focus on getting the environment running. The next step depends on the operating system that you are running. 
+As a first step, we will install a programming language, called Python, on your personal laptop [(students at University of Helsinki: What if I don’t have a laptop?)](./using_cubbli.md). There are all kinds of things to learn about programming languages and the concepts utilized in them, but we will skip those for now, and just focus on getting the environment running. The next step depends on the operating system that you are using. 
 
 ---
 
