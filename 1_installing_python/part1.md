@@ -50,10 +50,10 @@ Make sure that you now have Python 3 installed by following the instructions [he
 
 Now that we have Python installed let’s create the classic first program, called “Hello World”. The reason for that name becomes obvious soon.
 
-* Open a text editor that saves the text in plain text format (meaning text without any formatting). Word or OpenOffice isn’t a good choice here, but the following programs are (among many others):
-  * **Windows:** Notepad
-  * **Linux:** Gedit
-  * **Mac:** TextEdit (you have to go into plain text mode by following the instructions [here](https://www.tekrevue.com/tip/textedit-plain-text-mode/))
+* Open a text editor that saves the text in plain text format (meaning text without any formatting). Word or OpenOffice isn’t a good choice here, but the following programs are (among many others). Just go with the first one in the list now, and explore other options later if you wish:
+  * **Windows:** Notepad, [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)
+  * **Linux:** Gedit, [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)
+  * **Mac:** TextEdit (you have to go into plain text mode by following the instructions [here](https://www.tekrevue.com/tip/textedit-plain-text-mode/)), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)
 * Write the following line of code on the first row in the text file, and add a blank line below that (all python programs finish with one empty row).  
 ```python
 print("Hello World!")
