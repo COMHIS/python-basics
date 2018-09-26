@@ -2,7 +2,7 @@
 
 As a first step, we will install a programming language, called Python, on your personal laptop [(students at University of Helsinki: **What if I don’t have a laptop?**)](./using_cubbli.md). There are all kinds of things to learn about programming languages and the concepts utilized in them, but we will skip those for now, and just focus on getting the environment running. The next step depends on the operating system that you are using. 
 
-**Note:** With long and boring list of instructions it is normal to skim through them and only read the "important parts". That style is guaranteed to leave you confused and lost here, se be sure to take oyur time and follow all the steps laid out.
+**Note:** With long and boring list of instructions it is normal to skim through them and only read the "important parts". That style is guaranteed to leave you confused and lost here, se be sure to take your time and follow all the steps (1 to 5) laid out. Everything in this course builds on things previously learned, so skipping ahead is really not an option.
 
 ---
 
@@ -33,13 +33,13 @@ As a first step, we will install a programming language, called Python, on your 
 
 ---
 
-## Python in Terminal
+## 2. Python in Terminal
 
 Make sure that you now have Python 3 installed by following the instructions [here](./python_terminal.md) and return back after finishing with those.
 
 ---
 
-## Directory for your program
+## 3. Directory for your program
 
 * Create a directory (also known as folder) for your project. This would typically be under your personal home directory. A typical structure for programming projects would be as follows: `home/projects/name_of_project`
 * Use terminal to navigate to your project directory:
@@ -51,7 +51,7 @@ Make sure that you now have Python 3 installed by following the instructions [he
 
 ---
 
-## Hello World!
+## 4. Hello World!
 
 Now that we have Python installed let’s create the classic first program, called “Hello World”. The reason for that name becomes obvious soon.
 
@@ -59,7 +59,7 @@ Now that we have Python installed let’s create the classic first program, call
   * **Windows:** Notepad, [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)
   * **Linux:** Gedit, [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)
   * **Mac:** TextEdit (you have to go into plain text mode by following the instructions [here](https://www.tekrevue.com/tip/textedit-plain-text-mode/)), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/)
-* Write the following line of code on the first row in the text file, and add a blank line below that (all python programs finish with one empty row).  
+* Write the following line of code on the first row in the text file, and add a blank line below that (all Python programs finish with one empty row).
 ```python
 print("Hello World!")
 
@@ -71,7 +71,7 @@ print("Hello World!")
 
 ---
 
-## Finding answers and moving on
+## 5. Finding answers and moving on
 
 * If something went wrong come to our course Slack at *[dhintros.slack.com](https://dhintros.slack.com)* and describe the problem. Feel free to offer advice to your fellow students struggling with problems that you were able to solve. Also, feel free to use google to look for answers if you get stuck. Strong googling skills are at least 50% of all programming.
 * After you’ve got the code working try modifying it to print something else.
