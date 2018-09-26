@@ -1,14 +1,19 @@
 # Part 1 - Installing Python
 
-As a first step, we will install a programming language, called Python, on your personal laptop [(students at University of Helsinki: What if I don’t have a laptop?)](./using_cubbli.md). There are all kinds of things to learn about programming languages and the concepts utilized in them, but we will skip those for now, and just focus on getting the environment running. The next step depends on the operating system that you are using. 
+As a first step, we will install a programming language, called Python, on your personal laptop [(students at University of Helsinki: **What if I don’t have a laptop?**)](./using_cubbli.md). There are all kinds of things to learn about programming languages and the concepts utilized in them, but we will skip those for now, and just focus on getting the environment running. The next step depends on the operating system that you are using. 
+
+**Note:** With long and boring list of instructions it is normal to skim through them and only read the "important parts". That style is guaranteed to leave you confused and lost here, se be sure to take oyur time and follow all the steps laid out.
 
 ---
 
+## 1. Download and Install
+
 * **Windows:**
   1. download Python 3 installer from [python.org](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe).
-  2. Run the installer, and make sure to check the box saying “add Python 3.6 to path”
+  2. Run the installer, and **make sure to check the box saying “add Python 3.6 to path”**.
   3. The installer might ask you to change maximum length of path variable. Do that if it does so.
   4. You should be done now. To see if the installation was successfull go to part [“running python in terminal”](./python_terminal.md) in this assignment.
+  5. If you are sure you added Python to PATH, as instructed above, but still can't run it in the steps below try rebooting.
 * **Linux (Ubuntu):**
   1. Test if you already have Python 3 installed by following the instructions at [“running python in terminal”](./python_terminal.md).
   2. If not, follow the instructions at [this askubuntu.com answer](https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get).

@@ -20,7 +20,7 @@ print(string)
 string = "Amsterdam, Netherlands"
 ```
 will result in text 
-'NameError: name 'string' is not defined'.
+`NameError: name 'string' is not defined`.
 This is an error message which tries to inform us that we are asking the computer to do something (in this case print) 
 to some object that its never heard of so doesn't know what to do. This is one of the most common error messages and we
 will return another case it might result in later on.
@@ -47,8 +47,8 @@ repeating
 repeating
 end here
 
-The program repeats the command print("repeat") and add 1 to the value of the variable _i_ until reaches value 5 and then 
-continues forward. The function range(0,5) defines the sequence of values _i_ is given every round, so in this case values
+The program repeats the command `print("repeat")` and add 1 to the value of the variable _i_ until reaches value 5 and then 
+continues forward. The function `range(0,5)` defines the sequence of values _i_ is given every round, so in this case values
 0, 1, 2, 3, 4.
 
 Second major exception to the processing order are functions. Functions are actually bits code, that are written 
@@ -173,9 +173,9 @@ Next we'll try actually doing something with the values in our loop. Our dummy-d
 ```python
 publication_years = [1750, 1761, 1775, 1776, 1701, 1702, 1706, 1906, 1765, 1752, 1991, 751, 1789, 1777, 1711]
 for year in publication_years:
-    if year < 1700:
+    if year < 2000:
         print(year)
-    if year > 1799:
+    if year > 2000:
         print(year)
 ```
 
@@ -222,4 +222,3 @@ for year in publication_years:
         
 print(closest_year)
 ```
-

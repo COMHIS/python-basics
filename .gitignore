@@ -1,2 +1,7 @@
 */__pycache__
 venv/
+4_independent_project/ngrams.py
+4_independent_project/*.csv
+4_independent_project/*.txt
+5_markov_chains/*.txt
+5_markov_chains/ngrams.py

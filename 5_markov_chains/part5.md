@@ -33,9 +33,12 @@ Choose a key from the list you printed and get the value (list of words) associa
 Next, we'll want to automate what we just did. Our code will create a text of a set length, with a similar method as we did manually above. The steps are, briefly:
 
 * Start with the dictionary you created before (= continue below your previous code)
-* Create a variable that give the length of the text you want to generate in words.
+* Create a variable where you state the length of the text to be generated (in words). So, if you want to generate a text that is 100 words long, assign `100` as the value of this variable.
+* Create an empty list to which you add the words generated.
 * Set a word to start the generator with.
-* Create a loop in which you choose a random word paired with the word above, and repeate that with the previous word until you have created a long enough text.
+* Create a loop in which you:
+  1. Choose a random word from the dictionary, paired with the starting word. Add that one to your list of generated words.
+  2. Repeate the process with the previously generated word in the list until you reach the length you were aiming for.
 
 ## Steps in detail
 
