@@ -173,9 +173,9 @@ Next we'll try actually doing something with the values in our loop. Our dummy-d
 ```python
 publication_years = [1750, 1761, 1775, 1776, 1701, 1702, 1706, 1906, 1765, 1752, 1991, 751, 1789, 1777, 1711]
 for year in publication_years:
-    if year < 2000:
+    if year < 1700:
         print(year)
-    if year > 2000:
+    if year > 1799:
         print(year)
 ```
 
