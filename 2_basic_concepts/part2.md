@@ -1,8 +1,15 @@
 # Part 2 - Basic concepts in programming
 
+**Remember:** Read everything and don't skip ahead!
+
 This part will introduce the basic rationale behind a program and introduce some of its key components. Next, we'll try those concepts in practice with small coding exercises. After that we will dive into a basic example where these are applied in quantitative literary study.
 
-There's first a short theory part, and then some exercises. Don't worry if you don't get the "theory" on the first reading. Just go on into the exercises, and refer back to the first section. It will start to make more and more sense, eventually.
+There's first a short ["theory" part](#concepts-to-be-covered), and then some [exercises](#small-exercises). Don't worry if you don't get the "theory" on the first reading. Just go on into the exercises, and refer back to the first section. It will start to make more and more sense, eventually. So, to proceed:
+
+1. Read the [**"Concepts to bo covered"**](#concepts-to-be-covered) -section.
+2. Do the excercises under [**"Small exercises"**](#small-exercises).
+3. Unless you feel you really mastered everything on first go, continue on to the additional exercises [here](./2B_more_exercises.md).
+4. Finally move on to a demonstration of the concepts introduced here in practice: [Dostoyevsky -text analysis part](./suddenly.md).
 
 **Note:** We'll occasionally use the term _script_ here. That term refers to the program code that we're writing.
 
@@ -122,7 +129,7 @@ For each of these, create a script-file, like you did previously with the _Hello
 
 ### Variables and values 1
 
-Open your text editor, and write in the following code:
+Open your text editor (in a blank new file), and write in the following code:
 
 ```python
 course = "Introduction to Digital Humanities"
@@ -139,8 +146,10 @@ print(course)
 Remember to add a blank line at the end. As mentioned previously, all python scripts end with a blank line.
 
 Save it with a name of your choosing (`task1.py` for example), and run it in terminal with the command:
-`python3 task1.py`
-If you forgot how to use the terminal, refer back to the materials for part 1.
+`python3 task1.py` (or `python task1.py` if Python 3 runs under that command for you.)
+If you forgot how to use the terminal, refer back to the materials for part 1. 
+
+**Note:** It's a good idea to keep your program scripts (and other files too) organized. So, you might want to save the scripts you'll be creating here under a common directory (for example `[your home directory]/projects/python-basics/`).
 
 **Note:** Another term for running a script is "execute". We'll probably use that in the instructions too, just to break the monotony.
 
