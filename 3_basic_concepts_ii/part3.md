@@ -1,6 +1,6 @@
 # Part 3 - Basic concepts in programming II
 
-This part will familiarize you with the second group of basic concepts. After understanding these, you are in theory ready to go. There is still a lot of ground to cover beyond these concepts, but for an aspiring digital humanist, you are basically ready to go.
+This part will familiarize you with the second group of basic concepts. There is still a lot of ground to cover beyond these concepts, but for an aspiring digital humanist, you are basically ready to go.
 
 ## Important reminder
 
