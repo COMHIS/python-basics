@@ -2,6 +2,8 @@
 
 This part will familiarize you with the second group of basic concepts. There is still a lot of ground to cover beyond these concepts, but for an aspiring digital humanist, you are basically ready to go.
 
+This section covers a lot of ground. Each concept is introduced by showing how it fits into the totality of a python script and is accompanied by a series of exercises that make their use more clear. More thourough instructions are to be found in the [Overview](#overview) -section.
+
 ## Important reminder
 
 The basic logic of programming applies again. In the following script we'll go through the following steps:
