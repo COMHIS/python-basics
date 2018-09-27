@@ -9,7 +9,7 @@ There's first a short ["theory" part](#concepts-to-be-covered), and then some [e
 1. Read the [**"Concepts to bo covered"**](#concepts-to-be-covered) -section.
 2. Do the excercises under [**"Small exercises"**](#small-exercises).
 3. Unless you feel you really mastered everything on first go, continue on to the additional exercises [here](./2B_more_exercises.md).
-4. Finally move on to a demonstration of the concepts introduced here in practice: [Dostoyevsky -text analysis part](./suddenly.md).
+4. Finally move on to a demonstration of the concepts introduced in practice: [Dostoyevsky -text analysis part](./suddenly.md).
 
 **Note:** We'll occasionally use the term _script_ here. That term refers to the program code that we're writing.
 
