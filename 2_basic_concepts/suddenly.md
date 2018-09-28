@@ -16,7 +16,7 @@ You should end up with the text `Total 261 lines with the term "suddenly" found.
 
 ## "Suddenly" concordance
 
-We want to know in more detail what is happening around "suddenly" in the text. For this we'll employ a linguistic concept called _concordance_, which is explained [here](https://www.nottingham.ac.uk/alzsh3/acvocab/concordances.htm).
+We want to know in more detail what is happening around "suddenly" in the text. For this we'll employ a linguistic concept called _concordance_, which is explained [here](https://ota.ox.ac.uk/documents/searching/handbook.html).
 
 Now we also want to save our output, and produce a similar concordance output as in the example in the link. After modifying (right-click & save as again) [dostoyevsky2.py](https://raw.githubusercontent.com/COMHIS/python-basics/master/2_basic_concepts/dostoyevsky2.py) correctly, you should have a results file with that.
 
