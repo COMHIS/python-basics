@@ -22,6 +22,8 @@ Find a way to download a complete passanger manifest:
 
 ## Start coding! (But plan each step first)
 
+If you feel lost, you can use the template here to provide structure: [immigration_template.py](./immigration_template.py)
+
 ### Read the data in Python
 
 Read the csv into list of dictionary entries. Each row (passenger) should be a dictionary in the list.
