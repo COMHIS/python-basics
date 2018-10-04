@@ -4,11 +4,13 @@
 
 Find passenger lists for immigrants to United Staes during the Irish famine at https://aad.archives.gov/aad/
 
+> __Browse by Category__
 > Genealogy/ Personal History  
-> Casualties  
-> Civilians  
-> Military Personnel  
-> **Passenger Lists**  
+> * Casualties  
+> * Civilians  
+> * Military Personnel  
+> * **Passenger Lists**  
+> * Prisoners of War  
 
 https://aad.archives.gov/aad/series-description.jsp?s=639&cat=GP44&bc=,sl&col=1002
 
