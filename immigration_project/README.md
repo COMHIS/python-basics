@@ -14,7 +14,7 @@ Find passenger lists for immigrants to United Staes during the Irish famine at h
 
 https://aad.archives.gov/aad/series-description.jsp?s=639&cat=GP44&bc=,sl&col=1002
 
-### Download a table
+### Download a .csv table
 
 Find a way to download a complete passanger manifest:
 1. Find a journey to review from the list of ships to arrive.
@@ -96,4 +96,8 @@ Once you have the family status for each passenger, create another statistical o
 
 Finally, output the new more finely grained statistic as another csv file. You can do this by copying and modifying the previous csv output code.
 
-Create another graph and marvel the results. Test how your code works with another ships passenger list.
+The csv should look like this: [age_group_totals_example.csv](./age_group_totals_example2.csv).  
+And the bar plot (with Google Sheets) should look like this:
+![Passenger age breakdown](./chart2.png)
+
+Create another graph and be amazed by the results. Test how your code works with another ships passenger list.
