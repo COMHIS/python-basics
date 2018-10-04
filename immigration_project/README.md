@@ -73,7 +73,10 @@ with open(passenger_age_groups_outfile, 'w') as outfile:
         csvwriter.writerow([key, age_groups_dict[key]])
 ```
 
-Open the resulting csv on Google sheets and create a graph out of it. You should get something like this: 
+Open the resulting csv on Google sheets and create a graph out of it. The csv should look like this: [age_group_totals_example.csv](./age_group_totals_example.csv).  
+And the bar plot (with Google Sheets) should look like this:
+![Passenger age breakdown](./chart1.png)
+
 
 ### More statistics
 
