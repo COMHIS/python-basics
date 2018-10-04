@@ -4,7 +4,7 @@
 
 Find passenger lists for immigrants to United Staes during the Irish famine at https://aad.archives.gov/aad/
 
-> __Browse by Category__
+> ___Browse by Category___  
 > Genealogy/ Personal History  
 > * Casualties  
 > * Civilians  
@@ -43,18 +43,18 @@ Update the dictionary created from the csv file with additional data that we'll 
 Create your first statistical overview of the ship! Total the amount of passenger in each 10 year age group: (0-9, 10-19, 20-21, ...)
 
 There are quite a few ways to do this- here's one:
-1. As above, add additional field to each passenger dictionary: 'age_group'
-    - Create a function that takes a passenger's age as input (this would be the age -integer we created previously) and outputs the age group that age belongs to.
-        - You'll want to round the age down to nearest 10 (so 0, 10, 20, 30, etc...)
-        - You have to do really simple math to accomplish this. Some hints:
-        - Imagine someone with age of 24 ...
-        - Try giving the `int()` function a decimal number, say `2.4`. What's the output?
-        - What do you when multiplying that by 10?
+1. As above, add additional key to each passenger dictionary: 'age_group'.  
+   Create a function that takes a passenger's age as input (this would be the age -integer we created previously) and outputs the age group that age belongs to.
+   * You'll want to round the age down to nearest 10 (so 0, 10, 20, 30, etc...)
+   * You have to do really simple math to accomplish this. Some hints:
+   * Imagine someone with age of 24 ...
+   * Try giving the `int()` function a decimal number, say `2.4`. What's the output?
+   * What do you when multiplying that by 10?
 2. Now, create a dictionary for the age group totals with the keys [0, 10, 20, 30, 40, 50, 60, 70, 80, 90], each each holding the value 0.
-    - Iterate over the passenger list, and get the passenger's age group.
-    - Add one to the dictionary you just created at the corresponding age group's key. So, if the passenger's age group is 20, add one to the value held at the age group totals dictionary's key 20.
-        - Ther's shorthand for adding one. Here it would look like this: `age_group_dict[age_group] += 1` This does exactly the same as `age_group_dict[age_group] = age_group_dict[age_group] + 1`
-    - Again, inspect the resulting dictionary in Python to make sure it makes sense.
+   * Iterate over the passenger list, and get the passenger's age group.
+   * Add one to the dictionary you just created at the corresponding age group's key. So, if the passenger's age group is 20, add one to the value held at the age group totals dictionary's key 20.
+   * There's shorthand for adding one to a value. Here it would look like this: `age_group_dict[age_group] += 1` This does exactly the same as `age_group_dict[age_group] = age_group_dict[age_group] + 1`
+   * Again, inspect the resulting dictionary in Python to make sure it makes sense.
 
 ### Create an output file
 
@@ -73,7 +73,7 @@ with open(passenger_age_groups_outfile, 'w') as outfile:
         csvwriter.writerow([key, age_groups_dict[key]])
 ```
 
-Open the resulting csv on Google sheets and create a graph out of it.
+Open the resulting csv on Google sheets and create a graph out of it. You should get something like this: 
 
 ### More statistics
 
