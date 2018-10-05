@@ -1,5 +1,16 @@
 # Demographics of Immigration to New York in 19th c.
 
+This assignment has 3 parts, and then some.
+
+1. Find the data online, download it and read it into a Python data structure (a list of dictionaries).
+2. Refine the data by changing it to a more sensible format. Also update it with variables that help better understand it.
+3. Create a statistical analysis of the refined data and draw a nice bar chart from that.
+
+Additionally:
+* Further develop the workflow you created above to get more detailed analysis.
+* Think of how to still take this onward.
+
+
 ## Getting the data
 
 Find passenger lists for immigrants to United Staes during the Irish famine at https://aad.archives.gov/aad/
@@ -51,7 +62,7 @@ There are quite a few ways to do this- here's one:
    * You have to do really simple math to accomplish this. Some hints:
    * Imagine someone with age of 24 ...
    * Try giving the `int()` function a decimal number, say `2.4`. What's the output?
-   * What do you when multiplying that by 10?
+   * What do you get when multiplying that by 10?
 2. Now, create a dictionary for the age group totals with the keys [0, 10, 20, 30, 40, 50, 60, 70, 80, 90], each each holding the value 0.
    * Iterate over the passenger list, and get the passenger's age group.
    * Add one to the dictionary you just created at the corresponding age group's key. So, if the passenger's age group is 20, add one to the value held at the age group totals dictionary's key 20.
@@ -101,3 +112,9 @@ And the bar plot (with Google Sheets) should look like this:
 ![Passenger age breakdown](./chart2.png)
 
 Create another graph and be amazed by the results. Test how your code works with another ships passenger list.
+
+## Finally - what next?
+
+Think of a historical research question that we are trying to answer here.
+
+Now think of another historical research question that this data (of single or many ships) could be used to answer with similar digital methods. How would you have to modify the script you created to achieve this?
